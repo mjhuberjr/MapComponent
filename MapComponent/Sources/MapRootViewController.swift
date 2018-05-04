@@ -10,6 +10,8 @@ import UIKit
 
 class MapRootViewController: UIViewController {
     
+    @IBOutlet weak var mapView: MapAbstraction!
     
+    private var orientation: UIInterfaceOrientation!
     
 }

@@ -11,6 +11,6 @@ import MapKit
 // These types are used in the Abstraction classes to decouple us from MapKit incase we decide to switch to Mapbox
 // If we switch to Mapbox we can swap the import to mapbox and the typealias' to MGLMapView, MGLAnnotation, and MGLAnnotationView
 
-typealias MapType = MKMapView
-typealias AnnotationType = MKAnnotation
-typealias AnnotationViewType = MKAnnotationView
+public typealias MapType = MKMapView
+public typealias AnnotationType = MKAnnotation
+public typealias AnnotationViewType = MKAnnotationView

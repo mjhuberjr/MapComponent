@@ -17,6 +17,8 @@
 		5E0F60D6209BFB4100C38A53 /* MapViewAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60D5209BFB4100C38A53 /* MapViewAbstraction.swift */; };
 		5E0F60D9209BFB8700C38A53 /* AnnotationAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60D8209BFB8700C38A53 /* AnnotationAbstraction.swift */; };
 		5E0F60DB209BFBA000C38A53 /* AnnotationViewAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60DA209BFBA000C38A53 /* AnnotationViewAbstraction.swift */; };
+		5E0F60EA209CDC6F00C38A53 /* MapComponentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60E9209CDC6F00C38A53 /* MapComponentCoordinator.swift */; };
+		5E0F60EC209CDF8000C38A53 /* MapComponentTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60EB209CDF8000C38A53 /* MapComponentTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		5E0F60D5209BFB4100C38A53 /* MapViewAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewAbstraction.swift; sourceTree = "<group>"; };
 		5E0F60D8209BFB8700C38A53 /* AnnotationAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationAbstraction.swift; sourceTree = "<group>"; };
 		5E0F60DA209BFBA000C38A53 /* AnnotationViewAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationViewAbstraction.swift; sourceTree = "<group>"; };
+		5E0F60E9209CDC6F00C38A53 /* MapComponentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponentCoordinator.swift; sourceTree = "<group>"; };
+		5E0F60EB209CDF8000C38A53 /* MapComponentTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponentTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 		5E0F60CB209BF1F400C38A53 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5E0F60EB209CDF8000C38A53 /* MapComponentTypes.swift */,
+				5E0F60E9209CDC6F00C38A53 /* MapComponentCoordinator.swift */,
 				5E0F60CC209BF4D200C38A53 /* MapRootViewController.swift */,
 				5E0F60CE209BF4E300C38A53 /* MapRootViewController.xib */,
 				5E0F60D0209BF5E900C38A53 /* Views */,
@@ -114,10 +120,7 @@
 		5E0F60D0209BF5E900C38A53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5E0F60D3209BFB1100C38A53 /* MapTypes.swift */,
-				5E0F60D1209BFAB900C38A53 /* MapAbstraction.swift */,
-				5E0F60D5209BFB4100C38A53 /* MapViewAbstraction.swift */,
-				5E0F60D7209BFB6200C38A53 /* Annotations */,
+				5E0F60E4209CD89100C38A53 /* Maps */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +132,17 @@
 				5E0F60DA209BFBA000C38A53 /* AnnotationViewAbstraction.swift */,
 			);
 			path = Annotations;
+			sourceTree = "<group>";
+		};
+		5E0F60E4209CD89100C38A53 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				5E0F60D3209BFB1100C38A53 /* MapTypes.swift */,
+				5E0F60D1209BFAB900C38A53 /* MapAbstraction.swift */,
+				5E0F60D5209BFB4100C38A53 /* MapViewAbstraction.swift */,
+				5E0F60D7209BFB6200C38A53 /* Annotations */,
+			);
+			path = Maps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,8 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E0F60EC209CDF8000C38A53 /* MapComponentTypes.swift in Sources */,
 				5E0F60CD209BF4D200C38A53 /* MapRootViewController.swift in Sources */,
 				5E0F60D9209BFB8700C38A53 /* AnnotationAbstraction.swift in Sources */,
+				5E0F60EA209CDC6F00C38A53 /* MapComponentCoordinator.swift in Sources */,
 				5E0F60D2209BFAB900C38A53 /* MapAbstraction.swift in Sources */,
 				5E0F60D6209BFB4100C38A53 /* MapViewAbstraction.swift in Sources */,
 				5E0F60DB209BFBA000C38A53 /* AnnotationViewAbstraction.swift in Sources */,
