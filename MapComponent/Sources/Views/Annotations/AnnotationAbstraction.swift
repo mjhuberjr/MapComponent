@@ -6,8 +6,14 @@
 //  Copyright © 2018 operation thirteenOne. All rights reserved.
 //
 
-class AnnotationAbstraction: AnnotationType {
+import MapKit
+
+class AnnotationAbstraction: NSObject, AnnotationType { // Subclass of NSObject to conform to NSObjectProtocol
     
-    `
+    var coordinate: CLLocationCoordinate2D
+    
+    init(coordinate: CLLocationCoordinate2D) {
+        self.coordinate = coordinate
+    }
     
 }
