@@ -8,32 +8,26 @@
 
 import Foundation
 
-private protocol MapComponentCoordination: class {
+public protocol MapComponentCoordination: class {
     
-    var rootViewController: MapRootViewController { get }
     func mapComponentViewController() -> UIViewController
-    
-    // Map Interactions
-    func zoomIn()
-    func zoomOut()
-    func recenter()
-    func selectAnnotation()
-    
-    // Map Events
-    var annotationSelected: MapEventClosure? { get }
     
 }
 
-public class MapComponentCoordinator: MapComponentCoordination {
+public class MapComponentCoordinator: MapComponentCoordination, MapEvents {
     
     fileprivate var rootViewController: MapRootViewController
     
     // Map Events
-    fileprivate var annotationSelected: MapEventClosure?
+    var annotationSelected: MapEventClosure?
     
     public init(annotationSelected: MapEventClosure?) {
         self.rootViewController = MapRootViewController()
         self.annotationSelected = annotationSelected
+    }
+    
+    public func mapComponentViewController() -> UIViewController {
+        return rootViewController
     }
     
 }
@@ -42,24 +36,28 @@ public class MapComponentCoordinator: MapComponentCoordination {
 
 private extension MapComponentCoordinator {
     
-    func mapComponentViewController() -> UIViewController {
-        return rootViewController
-    }
     
-    func zoomIn() {
+    
+}
+
+// MARK: - Map Interactions
+
+extension MapComponentCoordinator: MapInteractions {
+
+    public func zoomIn() {
         
     }
-    
-    func zoomOut() {
+
+    public func zoomOut() {
         
     }
-    
-    func recenter() {
+
+    public func recenter() {
         
     }
-    
-    func selectAnnotation() {
+
+    public func selectAnnotation() {
         
     }
-    
+
 }

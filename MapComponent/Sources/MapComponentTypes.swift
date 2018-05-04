@@ -9,3 +9,18 @@
 import Foundation
 
 public typealias MapEventClosure = (String) -> Void // String refers to the id of the datasource
+
+public protocol MapInteractions: class {
+    
+    func zoomIn()
+    func zoomOut()
+    func recenter()
+    func selectAnnotation()
+    
+}
+
+protocol MapEvents: class {
+    
+    var annotationSelected: MapEventClosure? { get }
+    
+}
