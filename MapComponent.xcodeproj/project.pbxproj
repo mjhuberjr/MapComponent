@@ -19,6 +19,7 @@
 		5E0F60DB209BFBA000C38A53 /* AnnotationViewAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60DA209BFBA000C38A53 /* AnnotationViewAbstraction.swift */; };
 		5E0F60EA209CDC6F00C38A53 /* MapComponentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60E9209CDC6F00C38A53 /* MapComponentCoordinator.swift */; };
 		5E0F60EC209CDF8000C38A53 /* MapComponentTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60EB209CDF8000C38A53 /* MapComponentTypes.swift */; };
+		5E0F60EE209CE75500C38A53 /* MapComponentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60ED209CE75500C38A53 /* MapComponentPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5E0F60DA209BFBA000C38A53 /* AnnotationViewAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationViewAbstraction.swift; sourceTree = "<group>"; };
 		5E0F60E9209CDC6F00C38A53 /* MapComponentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponentCoordinator.swift; sourceTree = "<group>"; };
 		5E0F60EB209CDF8000C38A53 /* MapComponentTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponentTypes.swift; sourceTree = "<group>"; };
+		5E0F60ED209CE75500C38A53 /* MapComponentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponentPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				5E0F60EB209CDF8000C38A53 /* MapComponentTypes.swift */,
 				5E0F60E9209CDC6F00C38A53 /* MapComponentCoordinator.swift */,
+				5E0F60ED209CE75500C38A53 /* MapComponentPresenter.swift */,
 				5E0F60CC209BF4D200C38A53 /* MapRootViewController.swift */,
 				5E0F60CE209BF4E300C38A53 /* MapRootViewController.xib */,
 				5E0F60D0209BF5E900C38A53 /* Views */,
@@ -260,6 +263,7 @@
 				5E0F60D9209BFB8700C38A53 /* AnnotationAbstraction.swift in Sources */,
 				5E0F60EA209CDC6F00C38A53 /* MapComponentCoordinator.swift in Sources */,
 				5E0F60D2209BFAB900C38A53 /* MapAbstraction.swift in Sources */,
+				5E0F60EE209CE75500C38A53 /* MapComponentPresenter.swift in Sources */,
 				5E0F60D6209BFB4100C38A53 /* MapViewAbstraction.swift in Sources */,
 				5E0F60DB209BFBA000C38A53 /* AnnotationViewAbstraction.swift in Sources */,
 				5E0F60D4209BFB1200C38A53 /* MapTypes.swift in Sources */,

@@ -24,3 +24,12 @@ protocol MapEvents: class {
     var annotationSelected: MapEventClosure? { get }
     
 }
+
+// The app that uses the MapComponent will need a translator that returns a MapDataSource object to pass to the coordinator
+
+public protocol MapDataSource {
+    
+    var id: String { get }
+    var title: String { get }
+    
+}

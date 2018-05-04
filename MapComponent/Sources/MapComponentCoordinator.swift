@@ -21,8 +21,9 @@ public class MapComponentCoordinator: MapComponentCoordination, MapEvents {
     // Map Events
     var annotationSelected: MapEventClosure?
     
-    public init(annotationSelected: MapEventClosure?) {
-        self.rootViewController = MapRootViewController()
+    public init(dataSource: MapDataSource, annotationSelected: MapEventClosure?) {
+        let presenter = MapComponentPresenter(dataSource: dataSource)
+        self.rootViewController = MapRootViewController(presenter: presenter)
         self.annotationSelected = annotationSelected
     }
     
