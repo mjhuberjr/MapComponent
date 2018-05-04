@@ -10,6 +10,13 @@
 		5E0F60BB209BF1DB00C38A53 /* MapComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E0F60B1209BF1DB00C38A53 /* MapComponent.framework */; };
 		5E0F60C0209BF1DB00C38A53 /* MapComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60BF209BF1DB00C38A53 /* MapComponentTests.swift */; };
 		5E0F60C2209BF1DB00C38A53 /* MapComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E0F60B4209BF1DB00C38A53 /* MapComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E0F60CD209BF4D200C38A53 /* MapRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60CC209BF4D200C38A53 /* MapRootViewController.swift */; };
+		5E0F60CF209BF4E300C38A53 /* MapRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0F60CE209BF4E300C38A53 /* MapRootViewController.xib */; };
+		5E0F60D2209BFAB900C38A53 /* MapAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60D1209BFAB900C38A53 /* MapAbstraction.swift */; };
+		5E0F60D4209BFB1200C38A53 /* MapTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60D3209BFB1100C38A53 /* MapTypes.swift */; };
+		5E0F60D6209BFB4100C38A53 /* MapViewAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60D5209BFB4100C38A53 /* MapViewAbstraction.swift */; };
+		5E0F60D9209BFB8700C38A53 /* AnnotationAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60D8209BFB8700C38A53 /* AnnotationAbstraction.swift */; };
+		5E0F60DB209BFBA000C38A53 /* AnnotationViewAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60DA209BFBA000C38A53 /* AnnotationViewAbstraction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,13 @@
 		5E0F60BA209BF1DB00C38A53 /* MapComponentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapComponentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0F60BF209BF1DB00C38A53 /* MapComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponentTests.swift; sourceTree = "<group>"; };
 		5E0F60C1209BF1DB00C38A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E0F60CC209BF4D200C38A53 /* MapRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRootViewController.swift; sourceTree = "<group>"; };
+		5E0F60CE209BF4E300C38A53 /* MapRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapRootViewController.xib; sourceTree = "<group>"; };
+		5E0F60D1209BFAB900C38A53 /* MapAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAbstraction.swift; sourceTree = "<group>"; };
+		5E0F60D3209BFB1100C38A53 /* MapTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTypes.swift; sourceTree = "<group>"; };
+		5E0F60D5209BFB4100C38A53 /* MapViewAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewAbstraction.swift; sourceTree = "<group>"; };
+		5E0F60D8209BFB8700C38A53 /* AnnotationAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationAbstraction.swift; sourceTree = "<group>"; };
+		5E0F60DA209BFBA000C38A53 /* AnnotationViewAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationViewAbstraction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +104,31 @@
 		5E0F60CB209BF1F400C38A53 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5E0F60CC209BF4D200C38A53 /* MapRootViewController.swift */,
+				5E0F60CE209BF4E300C38A53 /* MapRootViewController.xib */,
+				5E0F60D0209BF5E900C38A53 /* Views */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		5E0F60D0209BF5E900C38A53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E0F60D3209BFB1100C38A53 /* MapTypes.swift */,
+				5E0F60D1209BFAB900C38A53 /* MapAbstraction.swift */,
+				5E0F60D5209BFB4100C38A53 /* MapViewAbstraction.swift */,
+				5E0F60D7209BFB6200C38A53 /* Annotations */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5E0F60D7209BFB6200C38A53 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				5E0F60D8209BFB8700C38A53 /* AnnotationAbstraction.swift */,
+				5E0F60DA209BFBA000C38A53 /* AnnotationViewAbstraction.swift */,
+			);
+			path = Annotations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +193,7 @@
 				TargetAttributes = {
 					5E0F60B0209BF1DB00C38A53 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					5E0F60B9209BF1DB00C38A53 = {
 						CreatedOnToolsVersion = 9.3;
@@ -185,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E0F60CF209BF4E300C38A53 /* MapRootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E0F60CD209BF4D200C38A53 /* MapRootViewController.swift in Sources */,
+				5E0F60D9209BFB8700C38A53 /* AnnotationAbstraction.swift in Sources */,
+				5E0F60D2209BFAB900C38A53 /* MapAbstraction.swift in Sources */,
+				5E0F60D6209BFB4100C38A53 /* MapViewAbstraction.swift in Sources */,
+				5E0F60DB209BFBA000C38A53 /* AnnotationViewAbstraction.swift in Sources */,
+				5E0F60D4209BFB1200C38A53 /* MapTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +392,7 @@
 		5E0F60C6209BF1DB00C38A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -364,6 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.op131.MapComponent;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -372,6 +419,7 @@
 		5E0F60C7209BF1DB00C38A53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -397,6 +445,7 @@
 		5E0F60C9209BF1DB00C38A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L26E58LG2M;
 				INFOPLIST_FILE = MapComponentTests/Info.plist;
@@ -415,6 +464,7 @@
 		5E0F60CA209BF1DB00C38A53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L26E58LG2M;
 				INFOPLIST_FILE = MapComponentTests/Info.plist;
