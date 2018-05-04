@@ -44,7 +44,16 @@ public protocol MapDataObject {
 
 public protocol MapDataFormatter {
     
-    func formatTitle()
-    func formatTitleSelected()
+    func formatTitle(for object: MapDataObject) -> String
+    func formatTitleSelected(for object: MapDataObject) -> String
+    func calculateOffset() -> CGPoint
+    
+}
+
+extension MapDataFormatter {
+    
+    func formatTitle(for object: MapDataObject) -> String { return object.title }
+    func formatTitleSelected(for object: MapDataObject) -> String { return object.title }
+    func calculateOffset() -> CGPoint { return CGPoint.zero }
     
 }
