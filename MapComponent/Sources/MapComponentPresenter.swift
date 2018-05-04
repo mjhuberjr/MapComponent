@@ -11,15 +11,18 @@ import Foundation
 protocol MapComponentPresentation: class {
     
     var dataSource: MapDataSource { get }
+    var dataFormatter: MapDataFormatter { get }
     
 }
 
 class MapComponentPresenter: MapComponentPresentation {
     
     var dataSource: MapDataSource
+    var dataFormatter: MapDataFormatter
     
-    init(dataSource: MapDataSource) {
+    init(dataSource: MapDataSource, dataFormatter: MapDataFormatter) {
         self.dataSource = dataSource
+        self.dataFormatter = dataFormatter
     }
     
 }

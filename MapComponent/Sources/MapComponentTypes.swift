@@ -39,3 +39,12 @@ public protocol MapDataObject {
     var title: String { get }
     
 }
+
+// MapDataFormatter allows the App using the component to format the data in a way that suites their needs.
+
+public protocol MapDataFormatter {
+    
+    func formatTitle()
+    func formatTitleSelected()
+    
+}
