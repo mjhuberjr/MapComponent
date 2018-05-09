@@ -16,6 +16,7 @@ public protocol MapConfigurable {
     var offset: CGPoint { get }
     var defaultZoomLevel: CGFloat { get }
     var maxZoomLevel: CGFloat { get }
+    var mapAttributes: MapAttributes { get }
     
 }
 
@@ -25,5 +26,6 @@ extension MapConfigurable {
     var offset: CGPoint { return CGPoint.zero }
     var defaultZoomLevel: CGFloat { return 0.0 }
     var maxZoomLevel: CGFloat { return 0.0 }
+    var mapAttributes: MapAttributes { return MapAttributes() }
     
 }

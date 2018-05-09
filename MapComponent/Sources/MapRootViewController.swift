@@ -33,7 +33,7 @@ class MapRootViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         orientation = UIApplication.shared.statusBarOrientation
     }
     
