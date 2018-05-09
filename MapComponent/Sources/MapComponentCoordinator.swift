@@ -14,17 +14,20 @@ public protocol MapComponentCoordination: class {
     
 }
 
-public class MapComponentCoordinator: MapComponentCoordination, MapEvents {
+// MARK: - Default implementations if not passed in from consumer of MapComponent
+
+class MapDataFormattableImpl: MapDataFormattable { init() { } }
+class MapConfigurableImpl: MapConfigurable { init() { } }
+
+public class MapComponentCoordinator: MapComponentCoordination {
     
     fileprivate var rootViewController: MapRootViewController
     
-    // Map Events
-    var annotationSelected: MapEventClosure?
-    
-    public init(dataSource: MapDataSource, dataFormatter: MapDataFormatter, annotationSelected: MapEventClosure?) {
-        let presenter = MapComponentPresenter(dataSource: dataSource, dataFormatter: dataFormatter)
+    public init(dataSource: MapDataSource, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil, mapEvents: MapEvents? = nil) {
+        let dataFormatter = dataFormattable ?? MapDataFormattableImpl()
+        let mapConfiguration = mapConfigurable ?? MapConfigurableImpl()
+        let presenter = MapComponentPresenter(dataSource: dataSource, dataFormatter: dataFormatter, mapConfiguration: mapConfiguration)
         self.rootViewController = MapRootViewController(presenter: presenter)
-        self.annotationSelected = annotationSelected
     }
     
     public func mapComponentViewController() -> UIViewController {

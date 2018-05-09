@@ -60,7 +60,7 @@ private extension MapRootViewController {
             orientation = UIApplication.shared.statusBarOrientation
         }
         
-        let offset = presenter.dataFormatter.calculateOffset()
+        let offset = presenter.mapConfiguration.offset
         focusMap(with: offset)
     }
     

@@ -1,5 +1,5 @@
 //
-//  MapDataFormatter.swift
+//  MapDataFormattable.swift
 //  MapComponent
 //
 //  Created by Michael J. Huber Jr. on 5/8/18.
@@ -10,15 +10,14 @@ import Foundation
 
 // MapDataFormatter allows the App using the component to format the data in a way that suites their needs.
 
-public protocol MapDataFormatter {
+public protocol MapDataFormattable {
     
     func formatTitle(for object: MapDataObject) -> String
     func formatTitleSelected(for object: MapDataObject) -> String
-    func calculateOffset() -> CGPoint
     
 }
 
-extension MapDataFormatter {
+extension MapDataFormattable {
     
     func formatTitle(for object: MapDataObject) -> String { return object.title }
     func formatTitleSelected(for object: MapDataObject) -> String { return object.title }

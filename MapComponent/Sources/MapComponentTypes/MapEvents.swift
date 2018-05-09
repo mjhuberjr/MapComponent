@@ -1,5 +1,5 @@
 //
-//  MapEvent.swift
+//  MapEvents.swift
 //  MapComponent
 //
 //  Created by Michael J. Huber Jr. on 5/8/18.
@@ -8,8 +8,14 @@
 
 import Foundation
 
-protocol MapEvents: class {
+public protocol MapEvents: class {
     
     var annotationSelected: MapEventClosure? { get }
+    
+}
+
+extension MapEvents {
+    
+    var annotationSelected: MapEventClosure? { return nil }
     
 }
