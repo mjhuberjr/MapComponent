@@ -10,7 +10,7 @@ import UIKit
 
 class MapRootViewController: UIViewController {
     
-    @IBOutlet weak var mapView: MapAbstraction!
+    @IBOutlet var mapView: MapAbstraction!
     
     private var presenter: MapComponentPresentation
     
@@ -21,7 +21,8 @@ class MapRootViewController: UIViewController {
     
     init(presenter: MapComponentPresentation) {
         self.presenter = presenter
-        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
+        self.mapView.presenter = presenter
+        super.init(nibName: nil, bundle: Bundle(for: MapRootViewController.self))
     }
     
     @available(*, unavailable)
@@ -35,6 +36,7 @@ class MapRootViewController: UIViewController {
         super.viewDidLoad()
         
         orientation = UIApplication.shared.statusBarOrientation
+        setupMapView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +54,10 @@ class MapRootViewController: UIViewController {
 // MARK: - Private methods
 
 private extension MapRootViewController {
+    
+    func setupMapView() {
+        mapView.configure(presenter)
+    }
     
     @objc func reframeMapView() {
         if orientation == UIApplication.shared.statusBarOrientation {

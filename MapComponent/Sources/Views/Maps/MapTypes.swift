@@ -12,5 +12,6 @@ import MapKit
 // If we switch to Mapbox we can swap the import to mapbox and the typealias' to MGLMapView, MGLAnnotation, and MGLAnnotationView
 
 public typealias MapType = MKMapView
+public typealias MapTypeDelegate = MKMapViewDelegate
 public typealias AnnotationType = MKAnnotation
 public typealias AnnotationViewType = MKAnnotationView

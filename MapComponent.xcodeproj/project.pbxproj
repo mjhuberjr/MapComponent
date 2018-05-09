@@ -26,6 +26,7 @@
 		5E0F60F920A28ED300C38A53 /* MapDataFormattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60F820A28ED300C38A53 /* MapDataFormattable.swift */; };
 		5E0F60FB20A28EED00C38A53 /* MapConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60FA20A28EED00C38A53 /* MapConfigurable.swift */; };
 		5E0F60FD20A299E000C38A53 /* MapAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60FC20A299E000C38A53 /* MapAttributes.swift */; };
+		5E0F610820A2A3D900C38A53 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F610720A2A3D900C38A53 /* UIView+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		5E0F60F820A28ED300C38A53 /* MapDataFormattable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataFormattable.swift; sourceTree = "<group>"; };
 		5E0F60FA20A28EED00C38A53 /* MapConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConfigurable.swift; sourceTree = "<group>"; };
 		5E0F60FC20A299E000C38A53 /* MapAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAttributes.swift; sourceTree = "<group>"; };
+		5E0F610720A2A3D900C38A53 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				5E0F60EF20A28E0A00C38A53 /* MapComponentTypes */,
-				5E0F60E9209CDC6F00C38A53 /* MapComponentCoordinator.swift */,
-				5E0F60ED209CE75500C38A53 /* MapComponentPresenter.swift */,
-				5E0F60CC209BF4D200C38A53 /* MapRootViewController.swift */,
-				5E0F60CE209BF4E300C38A53 /* MapRootViewController.xib */,
+				5E0F610520A2A39300C38A53 /* Root */,
+				5E0F610620A2A39B00C38A53 /* Extensions */,
 				5E0F60D0209BF5E900C38A53 /* Views */,
 			);
 			path = Sources;
@@ -172,6 +172,25 @@
 				5E0F60FA20A28EED00C38A53 /* MapConfigurable.swift */,
 			);
 			path = MapComponentTypes;
+			sourceTree = "<group>";
+		};
+		5E0F610520A2A39300C38A53 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				5E0F60E9209CDC6F00C38A53 /* MapComponentCoordinator.swift */,
+				5E0F60ED209CE75500C38A53 /* MapComponentPresenter.swift */,
+				5E0F60CC209BF4D200C38A53 /* MapRootViewController.swift */,
+				5E0F60CE209BF4E300C38A53 /* MapRootViewController.xib */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		5E0F610620A2A39B00C38A53 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E0F610720A2A3D900C38A53 /* UIView+Constraints.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +318,7 @@
 				5E0F60F120A28E1E00C38A53 /* MapComponentClosures.swift in Sources */,
 				5E0F60D4209BFB1200C38A53 /* MapTypes.swift in Sources */,
 				5E0F60F920A28ED300C38A53 /* MapDataFormattable.swift in Sources */,
+				5E0F610820A2A3D900C38A53 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
