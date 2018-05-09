@@ -18,8 +18,13 @@
 		5E0F60D9209BFB8700C38A53 /* AnnotationAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60D8209BFB8700C38A53 /* AnnotationAbstraction.swift */; };
 		5E0F60DB209BFBA000C38A53 /* AnnotationViewAbstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60DA209BFBA000C38A53 /* AnnotationViewAbstraction.swift */; };
 		5E0F60EA209CDC6F00C38A53 /* MapComponentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60E9209CDC6F00C38A53 /* MapComponentCoordinator.swift */; };
-		5E0F60EC209CDF8000C38A53 /* MapComponentTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60EB209CDF8000C38A53 /* MapComponentTypes.swift */; };
 		5E0F60EE209CE75500C38A53 /* MapComponentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60ED209CE75500C38A53 /* MapComponentPresenter.swift */; };
+		5E0F60F120A28E1E00C38A53 /* MapComponentClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60F020A28E1E00C38A53 /* MapComponentClosures.swift */; };
+		5E0F60F320A28E5600C38A53 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60F220A28E5600C38A53 /* MapInteractor.swift */; };
+		5E0F60F520A28E9500C38A53 /* MapEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60F420A28E9500C38A53 /* MapEvent.swift */; };
+		5E0F60F720A28EBB00C38A53 /* MapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60F620A28EBB00C38A53 /* MapDataSource.swift */; };
+		5E0F60F920A28ED300C38A53 /* MapDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60F820A28ED300C38A53 /* MapDataFormatter.swift */; };
+		5E0F60FB20A28EED00C38A53 /* MapConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60FA20A28EED00C38A53 /* MapConfigurable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +52,13 @@
 		5E0F60D8209BFB8700C38A53 /* AnnotationAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationAbstraction.swift; sourceTree = "<group>"; };
 		5E0F60DA209BFBA000C38A53 /* AnnotationViewAbstraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationViewAbstraction.swift; sourceTree = "<group>"; };
 		5E0F60E9209CDC6F00C38A53 /* MapComponentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponentCoordinator.swift; sourceTree = "<group>"; };
-		5E0F60EB209CDF8000C38A53 /* MapComponentTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponentTypes.swift; sourceTree = "<group>"; };
 		5E0F60ED209CE75500C38A53 /* MapComponentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponentPresenter.swift; sourceTree = "<group>"; };
+		5E0F60F020A28E1E00C38A53 /* MapComponentClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponentClosures.swift; sourceTree = "<group>"; };
+		5E0F60F220A28E5600C38A53 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		5E0F60F420A28E9500C38A53 /* MapEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEvent.swift; sourceTree = "<group>"; };
+		5E0F60F620A28EBB00C38A53 /* MapDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataSource.swift; sourceTree = "<group>"; };
+		5E0F60F820A28ED300C38A53 /* MapDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataFormatter.swift; sourceTree = "<group>"; };
+		5E0F60FA20A28EED00C38A53 /* MapConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConfigurable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +120,7 @@
 		5E0F60CB209BF1F400C38A53 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5E0F60EB209CDF8000C38A53 /* MapComponentTypes.swift */,
+				5E0F60EF20A28E0A00C38A53 /* MapComponentTypes */,
 				5E0F60E9209CDC6F00C38A53 /* MapComponentCoordinator.swift */,
 				5E0F60ED209CE75500C38A53 /* MapComponentPresenter.swift */,
 				5E0F60CC209BF4D200C38A53 /* MapRootViewController.swift */,
@@ -146,6 +156,19 @@
 				5E0F60D7209BFB6200C38A53 /* Annotations */,
 			);
 			path = Maps;
+			sourceTree = "<group>";
+		};
+		5E0F60EF20A28E0A00C38A53 /* MapComponentTypes */ = {
+			isa = PBXGroup;
+			children = (
+				5E0F60F020A28E1E00C38A53 /* MapComponentClosures.swift */,
+				5E0F60F220A28E5600C38A53 /* MapInteractor.swift */,
+				5E0F60F420A28E9500C38A53 /* MapEvent.swift */,
+				5E0F60F620A28EBB00C38A53 /* MapDataSource.swift */,
+				5E0F60F820A28ED300C38A53 /* MapDataFormatter.swift */,
+				5E0F60FA20A28EED00C38A53 /* MapConfigurable.swift */,
+			);
+			path = MapComponentTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,15 +281,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E0F60EC209CDF8000C38A53 /* MapComponentTypes.swift in Sources */,
+				5E0F60F520A28E9500C38A53 /* MapEvent.swift in Sources */,
 				5E0F60CD209BF4D200C38A53 /* MapRootViewController.swift in Sources */,
 				5E0F60D9209BFB8700C38A53 /* AnnotationAbstraction.swift in Sources */,
 				5E0F60EA209CDC6F00C38A53 /* MapComponentCoordinator.swift in Sources */,
 				5E0F60D2209BFAB900C38A53 /* MapAbstraction.swift in Sources */,
 				5E0F60EE209CE75500C38A53 /* MapComponentPresenter.swift in Sources */,
+				5E0F60F320A28E5600C38A53 /* MapInteractor.swift in Sources */,
 				5E0F60D6209BFB4100C38A53 /* MapViewAbstraction.swift in Sources */,
 				5E0F60DB209BFBA000C38A53 /* AnnotationViewAbstraction.swift in Sources */,
+				5E0F60F720A28EBB00C38A53 /* MapDataSource.swift in Sources */,
+				5E0F60FB20A28EED00C38A53 /* MapConfigurable.swift in Sources */,
+				5E0F60F120A28E1E00C38A53 /* MapComponentClosures.swift in Sources */,
 				5E0F60D4209BFB1200C38A53 /* MapTypes.swift in Sources */,
+				5E0F60F920A28ED300C38A53 /* MapDataFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

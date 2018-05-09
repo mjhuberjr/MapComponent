@@ -43,7 +43,7 @@ private extension MapComponentCoordinator {
 
 // MARK: - Map Interactions
 
-extension MapComponentCoordinator: MapInteractions {
+extension MapComponentCoordinator: MapInteractor {
 
     public func zoomIn() {
         
