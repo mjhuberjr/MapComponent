@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MapKit
+import CoreLocation
 
 class MapAbstraction: UIView {
     
@@ -24,8 +24,7 @@ class MapAbstraction: UIView {
         self.mapView = MapViewAbstraction(mapAttributes: mapAttributes, delegate: delegate)
     }
     
-    func center(_ object: MapDataObject) {
-        let coordinate = object.coordinate
+    func center(_ coordinate: CLLocationCoordinate2D) {
         mapView.setCenter(coordinate, animated: true)
     }
     

@@ -9,9 +9,13 @@
 import Foundation
 
 class MapAbstractionDelegate: NSObject, MapEvents {
+    
+    var interactor: MapInteraction
     var annotationSelected: MapEventClosure?
     
-    init(mapConfiguration: MapConfigurable) {
+    init(interactor: MapInteraction, mapConfiguration: MapConfigurable) {
+        self.interactor = interactor
+        
         let mapEvents = mapConfiguration.mapEvents
         self.annotationSelected = mapEvents.annotationSelected
     }
@@ -35,8 +39,9 @@ extension MapAbstractionDelegate: MapTypeDelegate {
     
     func mapView(_ mapView: MapType, didSelect view: AnnotationViewType) {
         guard let annotationView = view as? AnnotationViewAbstraction else { return }
-        let identifier = annotationView.data.id
-        // TODO: Center map and make AnnotationView larger with animation
+        let data = annotationView.data
+        let identifier = data.id
+        interactor.focus(on: data)
         annotationSelected?(identifier)
     }
     

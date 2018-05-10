@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 protocol MapInteraction: class {
 
@@ -32,12 +33,15 @@ class MapInteractor {
 extension MapInteractor: MapInteraction {
     
     func recenter() {
-        // This will recenter on the users location
+        // TODO: Use current location, for now use SLC
+        let coordinate  = CLLocationCoordinate2D(latitude: 40.5649781, longitude: -111.83897260000003)
+        mapView.center(coordinate)
     }
     
     func focus(on object: MapDataObject?) {
         guard let object = object else { recenter(); return }
-        mapView.center(object)
+        let coordinate = object.coordinate
+        mapView.center(coordinate)
     }
     
     func selectAnnotation(with identifier: String) {
