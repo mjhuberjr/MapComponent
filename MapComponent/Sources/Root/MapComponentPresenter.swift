@@ -14,6 +14,8 @@ protocol MapComponentPresentation: class {
     var dataFormatter: MapDataFormattable { get }
     var mapConfiguration: MapConfigurable { get }
     
+    var selectedObject: MapDataObject? { get set }
+    
 }
 
 class MapComponentPresenter: MapComponentPresentation {
@@ -21,6 +23,8 @@ class MapComponentPresenter: MapComponentPresentation {
     var dataSource: MapDataSource
     var dataFormatter: MapDataFormattable
     var mapConfiguration: MapConfigurable
+    
+    var selectedObject: MapDataObject?
     
     init(dataSource: MapDataSource, dataFormatter: MapDataFormattable, mapConfiguration: MapConfigurable) {
         self.dataSource = dataSource

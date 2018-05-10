@@ -13,7 +13,7 @@ import Foundation
 // them to MapDataObjects then bundle them back up as a MapDataSource.
 
 public protocol MapDataSource {
-    var dataSource: [MapDataObject] { get }
+    var data: [MapDataObject] { get }
 }
 
 public protocol MapDataObject {

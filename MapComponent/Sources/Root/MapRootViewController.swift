@@ -13,6 +13,7 @@ class MapRootViewController: UIViewController {
     @IBOutlet var mapView: MapAbstraction!
     
     private var presenter: MapComponentPresentation
+    var interactor: MapInteraction
     
     // Layout properties
     private var orientation: UIInterfaceOrientation!
@@ -22,6 +23,10 @@ class MapRootViewController: UIViewController {
     init(presenter: MapComponentPresentation) {
         self.presenter = presenter
         self.mapView.presenter = presenter
+        
+        let interactor = MapInteractor(presenter: presenter, mapView: mapView)
+        self.interactor = interactor
+        
         super.init(nibName: nil, bundle: Bundle(for: MapRootViewController.self))
     }
     

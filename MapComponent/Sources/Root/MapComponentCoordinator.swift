@@ -22,6 +22,9 @@ class MapConfigurableImpl: MapConfigurable { init() { } }
 public class MapComponentCoordinator: MapComponentCoordination {
     
     fileprivate var rootViewController: MapRootViewController
+    fileprivate var interactor: MapInteraction {
+        return rootViewController.interactor
+    }
     
     public init(dataSource: MapDataSource, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil, mapEvents: MapEvents? = nil) {
         let dataFormatter = dataFormattable ?? MapDataFormattableImpl()
@@ -36,32 +39,20 @@ public class MapComponentCoordinator: MapComponentCoordination {
     
 }
 
-// MARK: - Private methods
-
-private extension MapComponentCoordinator {
-    
-    
-    
-}
-
 // MARK: - Map Interactions
 
-extension MapComponentCoordinator: MapInteractor {
-
-    public func zoomIn() {
-        
-    }
-
-    public func zoomOut() {
-        
-    }
+extension MapComponentCoordinator {
 
     public func recenter() {
-        
+        interactor.recenter()
     }
 
-    public func selectAnnotation() {
-        
+    public func selectAnnotation(_ identifier: String) {
+        interactor.selectAnnotation(with: identifier)
+    }
+    
+    public func deslectAnnotation() {
+        interactor.deselectAnnotation()
     }
 
 }

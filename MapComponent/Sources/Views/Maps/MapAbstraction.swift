@@ -20,6 +20,9 @@ class MapAbstraction: UIView {
     func configure(_ presenter: MapComponentPresentation) {
         self.presenter = presenter
         
+        let mapAttributes = presenter.mapConfiguration.mapAttributes
+        self.mapView = MapViewAbstraction(mapAttributes: mapAttributes)
+        
         let mapEvents = presenter.mapConfiguration.mapEvents
         self.annotationSelected = mapEvents.annotationSelected
     }
