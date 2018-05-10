@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5E0F611820A3E42200C38A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F611720A3E42200C38A53 /* AppDelegate.swift */; };
-		5E0F611A20A3E42200C38A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F611920A3E42200C38A53 /* ViewController.swift */; };
 		5E0F611D20A3E42200C38A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0F611B20A3E42200C38A53 /* Main.storyboard */; };
 		5E0F611F20A3E42500C38A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0F611E20A3E42500C38A53 /* Assets.xcassets */; };
 		5E0F612220A3E42500C38A53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0F612020A3E42500C38A53 /* LaunchScreen.storyboard */; };
-		5E0F614620A3E89400C38A53 /* MapComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E0F614520A3E89400C38A53 /* MapComponent.framework */; };
-		5E0F614720A3E89400C38A53 /* MapComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E0F614520A3E89400C38A53 /* MapComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E0F614920A3EBB800C38A53 /* MapComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E0F614820A3EBB700C38A53 /* MapComponent.framework */; };
+		5E0F614A20A3EBB800C38A53 /* MapComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E0F614820A3EBB700C38A53 /* MapComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +22,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5E0F614720A3E89400C38A53 /* MapComponent.framework in Embed Frameworks */,
+				5E0F614A20A3EBB800C38A53 /* MapComponent.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,12 +32,12 @@
 /* Begin PBXFileReference section */
 		5E0F611420A3E42200C38A53 /* MapComponentDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapComponentDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0F611720A3E42200C38A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E0F611920A3E42200C38A53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E0F611C20A3E42200C38A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E0F611E20A3E42500C38A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E0F612120A3E42500C38A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E0F612320A3E42500C38A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E0F614520A3E89400C38A53 /* MapComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapComponent.framework; sourceTree = "<group>"; };
+		5E0F614820A3EBB700C38A53 /* MapComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapComponent.framework; path = "../../../../Library/Developer/Xcode/DerivedData/MapComponent-byzpyhkjsbbwchcdurevjjxugxnf/Build/Products/Debug-iphonesimulator/MapComponent.framework"; sourceTree = "<group>"; };
+		5E0F614B20A3EBBA00C38A53 /* MapComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapComponent.framework; path = "../../../../Library/Developer/Xcode/DerivedData/MapComponent-byzpyhkjsbbwchcdurevjjxugxnf/Build/Products/Debug-iphonesimulator/MapComponent.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E0F614620A3E89400C38A53 /* MapComponent.framework in Frameworks */,
+				5E0F614920A3EBB800C38A53 /* MapComponent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +55,7 @@
 		5E0F610B20A3E42200C38A53 = {
 			isa = PBXGroup;
 			children = (
+				5E0F614820A3EBB700C38A53 /* MapComponent.framework */,
 				5E0F611620A3E42200C38A53 /* MapComponentDemo */,
 				5E0F611520A3E42200C38A53 /* Products */,
 				5E0F612920A3E63800C38A53 /* Frameworks */,
@@ -74,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				5E0F611720A3E42200C38A53 /* AppDelegate.swift */,
-				5E0F611920A3E42200C38A53 /* ViewController.swift */,
 				5E0F611B20A3E42200C38A53 /* Main.storyboard */,
 				5E0F611E20A3E42500C38A53 /* Assets.xcassets */,
 				5E0F612020A3E42500C38A53 /* LaunchScreen.storyboard */,
@@ -86,7 +85,7 @@
 		5E0F612920A3E63800C38A53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5E0F614520A3E89400C38A53 /* MapComponent.framework */,
+				5E0F614B20A3EBBA00C38A53 /* MapComponent.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,7 +162,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E0F611A20A3E42200C38A53 /* ViewController.swift in Sources */,
 				5E0F611820A3E42200C38A53 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

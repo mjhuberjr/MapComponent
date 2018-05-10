@@ -26,9 +26,10 @@ public class MapComponentCoordinator: MapComponentCoordination {
         return rootViewController.interactor
     }
     
-    public init(dataSource: MapDataSource, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil, mapEvents: MapEvents? = nil) {
+    public init(dataSource: MapDataSource?, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil, mapEvents: MapEvents? = nil) {
         let dataFormatter = dataFormattable ?? MapDataFormattableImpl()
         let mapConfiguration = mapConfigurable ?? MapConfigurableImpl()
+        let dataSource = dataSource ?? PrototypeData()
         let presenter = MapComponentPresenter(dataSource: dataSource, dataFormatter: dataFormatter, mapConfiguration: mapConfiguration)
         self.rootViewController = MapRootViewController(presenter: presenter)
     }
