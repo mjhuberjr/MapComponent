@@ -61,7 +61,8 @@ class MapRootViewController: UIViewController {
 private extension MapRootViewController {
     
     func setupMapView() {
-        mapView.configure(presenter)
+        let delegate = MapAbstractionDelegate(mapConfiguration: presenter.mapConfiguration`)
+        mapView.configure(presenter, delegate: delegate)
     }
     
     @objc func reframeMapView() {

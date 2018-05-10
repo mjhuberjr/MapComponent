@@ -27,6 +27,7 @@
 		5E0F60FB20A28EED00C38A53 /* MapConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60FA20A28EED00C38A53 /* MapConfigurable.swift */; };
 		5E0F60FD20A299E000C38A53 /* MapAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60FC20A299E000C38A53 /* MapAttributes.swift */; };
 		5E0F610820A2A3D900C38A53 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F610720A2A3D900C38A53 /* UIView+Constraints.swift */; };
+		5E0F610A20A3DCE700C38A53 /* MapAbstrationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F610920A3DCE700C38A53 /* MapAbstrationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		5E0F60FA20A28EED00C38A53 /* MapConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConfigurable.swift; sourceTree = "<group>"; };
 		5E0F60FC20A299E000C38A53 /* MapAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAttributes.swift; sourceTree = "<group>"; };
 		5E0F610720A2A3D900C38A53 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		5E0F610920A3DCE700C38A53 /* MapAbstrationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAbstrationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				5E0F60D3209BFB1100C38A53 /* MapTypes.swift */,
 				5E0F60D1209BFAB900C38A53 /* MapAbstraction.swift */,
+				5E0F610920A3DCE700C38A53 /* MapAbstrationDelegate.swift */,
 				5E0F60D5209BFB4100C38A53 /* MapViewAbstraction.swift */,
 				5E0F60D7209BFB6200C38A53 /* Annotations */,
 			);
@@ -313,6 +316,7 @@
 				5E0F60F320A28E5600C38A53 /* MapInteraction.swift in Sources */,
 				5E0F60D6209BFB4100C38A53 /* MapViewAbstraction.swift in Sources */,
 				5E0F60DB209BFBA000C38A53 /* AnnotationViewAbstraction.swift in Sources */,
+				5E0F610A20A3DCE700C38A53 /* MapAbstrationDelegate.swift in Sources */,
 				5E0F60F720A28EBB00C38A53 /* MapDataSource.swift in Sources */,
 				5E0F60FB20A28EED00C38A53 /* MapConfigurable.swift in Sources */,
 				5E0F60F120A28E1E00C38A53 /* MapComponentClosures.swift in Sources */,
