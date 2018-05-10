@@ -61,7 +61,7 @@ class MapRootViewController: UIViewController {
 private extension MapRootViewController {
     
     func setupMapView() {
-        let delegate = MapAbstractionDelegate(mapConfiguration: presenter.mapConfiguration`)
+        let delegate = MapAbstractionDelegate(mapConfiguration: presenter.mapConfiguration)
         mapView.configure(presenter, delegate: delegate)
     }
     
@@ -72,12 +72,8 @@ private extension MapRootViewController {
             orientation = UIApplication.shared.statusBarOrientation
         }
         
-        let offset = presenter.mapConfiguration.offset
-        focusMap(with: offset)
-    }
-    
-    func focusMap(with offset: CGPoint) {
-        // Center the map
+        let selectedObject = presenter.selectedObject
+        interactor.focus(on: selectedObject)
     }
     
 }

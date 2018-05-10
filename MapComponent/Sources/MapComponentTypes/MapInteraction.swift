@@ -11,7 +11,7 @@ import Foundation
 protocol MapInteraction: class {
 
     func recenter()
-    func focus(on object: MapDataObject)
+    func focus(on object: MapDataObject?)
     func selectAnnotation(with identifier: String)
     func deselectAnnotation()
     
@@ -35,7 +35,8 @@ extension MapInteractor: MapInteraction {
         // This will recenter on the users location
     }
     
-    func focus(on object: MapDataObject) {
+    func focus(on object: MapDataObject?) {
+        guard let object = object else { recenter(); return }
         mapView.center(object)
     }
     
