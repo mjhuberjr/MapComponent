@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 // The app that uses the MapComponent will need a translator that returns a MapDataSource object to pass to the coordinator
 // MapDataSource is just an array of MapDataObjects. The translator should convert the array of whatever object the app uses convert
@@ -20,5 +21,6 @@ public protocol MapDataObject {
     
     var id: String { get }
     var title: String { get }
+    var coordinate: CLLocationCoordinate2D { get }
     
 }

@@ -32,11 +32,11 @@ class MapInteractor {
 extension MapInteractor: MapInteraction {
     
     func recenter() {
-        
+        // This will recenter on the users location
     }
     
     func focus(on object: MapDataObject) {
-        
+        mapView.center(object)
     }
     
     func selectAnnotation(with identifier: String) {

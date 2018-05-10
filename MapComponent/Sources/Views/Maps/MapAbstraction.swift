@@ -27,6 +27,11 @@ class MapAbstraction: UIView {
         self.annotationSelected = mapEvents.annotationSelected
     }
     
+    func center(_ object: MapDataObject) {
+        let coordinate = object.coordinate
+        mapView.setCenter(coordinate, animated: true)
+    }
+    
 }
 
 // MARK: - MapType Delegate
