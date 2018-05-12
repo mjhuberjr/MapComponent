@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MapComponentDemo
 //
-//  Created by Michael J. Huber Jr. on 5/9/18.
+//  Created by Michael J. Huber Jr. on 5/10/18.
 //  Copyright © 2018 operation thirteenOne. All rights reserved.
 //
 
@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let coordinator = MapComponentCoordinator()
+        let rootCoordinator = MapComponentCoordinator(dataSource: nil)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = rootCoordinator.mapComponentViewController()
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

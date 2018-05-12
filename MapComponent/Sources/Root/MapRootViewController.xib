@@ -12,7 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapRootViewController" customModule="MapComponent" customModuleProvider="target">
             <connections>
-                <outlet property="mapView" destination="TBw-Nq-DYE" id="PRa-KB-KW9"/>
+                <outlet property="mapView" destination="TBw-Nq-DYE" id="oHf-U5-FFe"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ekB-GP-2tW"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -21,17 +21,16 @@ class MapConfigurableImpl: MapConfigurable { init() { } }
 
 public class MapComponentCoordinator: MapComponentCoordination {
     
-    fileprivate var rootViewController: MapRootViewController
-    fileprivate var interactor: MapInteraction {
-        return rootViewController.interactor
-    }
+    fileprivate let rootViewController: MapRootViewController
+    fileprivate let interactor: MapInteraction? = nil
     
     public init(dataSource: MapDataSource?, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil, mapEvents: MapEvents? = nil) {
         let dataFormatter = dataFormattable ?? MapDataFormattableImpl()
         let mapConfiguration = mapConfigurable ?? MapConfigurableImpl()
         let dataSource = dataSource ?? PrototypeData()
         let presenter = MapComponentPresenter(dataSource: dataSource, dataFormatter: dataFormatter, mapConfiguration: mapConfiguration)
-        self.rootViewController = MapRootViewController(presenter: presenter)
+        rootViewController = MapRootViewController(presenter: presenter)
+//        interactor = rootViewController.interactor
     }
     
     public func mapComponentViewController() -> UIViewController {
@@ -45,15 +44,15 @@ public class MapComponentCoordinator: MapComponentCoordination {
 extension MapComponentCoordinator {
 
     public func recenter() {
-        interactor.recenter()
+        interactor?.recenter()
     }
 
     public func selectAnnotation(_ identifier: String) {
-        interactor.selectAnnotation(with: identifier)
+        interactor?.selectAnnotation(with: identifier)
     }
     
     public func deslectAnnotation() {
-        interactor.deselectAnnotation()
+        interactor?.deselectAnnotation()
     }
 
 }

@@ -10,12 +10,20 @@ import MapKit
 
 class AnnotationAbstraction: NSObject, AnnotationType { // Subclass of NSObject to conform to NSObjectProtocol
     
-    var data: MapDataObject
+    var id: String
+    var title: String?
+    var subtitle: String?
     var coordinate: CLLocationCoordinate2D
     
-    init(data: MapDataObject, coordinate: CLLocationCoordinate2D) {
+    var data: MapDataObject // This is used for AnnotationViewAbstraction
+    
+    init(data: MapDataObject) {
+        id = data.id
+        title = data.title
+        subtitle = data.subtitle
+        coordinate = data.coordinate
+        
         self.data = data
-        self.coordinate = coordinate
     }
     
 }

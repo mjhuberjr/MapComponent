@@ -12,7 +12,7 @@ import CoreLocation
 protocol MapInteraction: class {
 
     func recenter()
-    func focus(on object: MapDataObject?)
+    func focus(on coordinate: CLLocationCoordinate2D?)
     func selectAnnotation(with identifier: String)
     func deselectAnnotation()
     
@@ -38,9 +38,8 @@ extension MapInteractor: MapInteraction {
         mapView.center(coordinate)
     }
     
-    func focus(on object: MapDataObject?) {
-        guard let object = object else { recenter(); return }
-        let coordinate = object.coordinate
+    func focus(on coordinate: CLLocationCoordinate2D?) {
+        guard let coordinate = coordinate else { recenter(); return }
         mapView.center(coordinate)
     }
     
@@ -51,7 +50,8 @@ extension MapInteractor: MapInteraction {
         }.first
         guard let selectedObject = object else { fatalError("That object doesn't exists... something bad happened.") }
         presenter.selectedObject = selectedObject
-        focus(on: selectedObject)
+        let coordinate = selectedObject.coordinate
+        focus(on: coordinate)
     }
     
     func deselectAnnotation() {

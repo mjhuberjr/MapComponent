@@ -28,8 +28,7 @@ extension MapAbstractionDelegate: MapTypeDelegate {
     
     func mapView(_ mapView: MapType, viewFor annotation: AnnotationType) -> AnnotationViewType? {
         guard let annotation = annotation as? AnnotationAbstraction else { return nil }
-        let data = annotation.data
-        let identifier = data.id
+        let identifier = annotation.id
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? AnnotationViewAbstraction
         if annotationView == nil {
             annotationView = AnnotationViewAbstraction(annotation: annotation, reuseIdentifier: identifier)
@@ -39,9 +38,9 @@ extension MapAbstractionDelegate: MapTypeDelegate {
     
     func mapView(_ mapView: MapType, didSelect view: AnnotationViewType) {
         guard let annotationView = view as? AnnotationViewAbstraction else { return }
-        let data = annotationView.data
-        let identifier = data.id
-        interactor.focus(on: data)
+        let identifier = annotationView.data.id
+        let coordinate = annotationView.data.coordinate
+        interactor.focus(on: coordinate)
         annotationSelected?(identifier)
     }
     

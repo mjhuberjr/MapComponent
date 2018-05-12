@@ -28,6 +28,7 @@
 		5E0F60FD20A299E000C38A53 /* MapAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F60FC20A299E000C38A53 /* MapAttributes.swift */; };
 		5E0F610820A2A3D900C38A53 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F610720A2A3D900C38A53 /* UIView+Constraints.swift */; };
 		5E0F610A20A3DCE700C38A53 /* MapAbstrationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F610920A3DCE700C38A53 /* MapAbstrationDelegate.swift */; };
+		5E1DF89420A65C9800BA6517 /* UIViewController+Embed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1DF89320A65C9800BA6517 /* UIViewController+Embed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		5E0F60FC20A299E000C38A53 /* MapAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAttributes.swift; sourceTree = "<group>"; };
 		5E0F610720A2A3D900C38A53 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		5E0F610920A3DCE700C38A53 /* MapAbstrationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAbstrationDelegate.swift; sourceTree = "<group>"; };
+		5E1DF89320A65C9800BA6517 /* UIViewController+Embed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embed.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				5E0F610720A2A3D900C38A53 /* UIView+Constraints.swift */,
+				5E1DF89320A65C9800BA6517 /* UIViewController+Embed.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E1DF89420A65C9800BA6517 /* UIViewController+Embed.swift in Sources */,
 				5E0F60F520A28E9500C38A53 /* MapEvents.swift in Sources */,
 				5E0F60CD209BF4D200C38A53 /* MapRootViewController.swift in Sources */,
 				5E0F60FD20A299E000C38A53 /* MapAttributes.swift in Sources */,

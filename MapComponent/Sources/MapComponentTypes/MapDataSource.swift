@@ -20,7 +20,8 @@ public protocol MapDataSource {
 public protocol MapDataObject {
     
     var id: String { get }
-    var title: String { get }
+    var title: String? { get }
+    var subtitle: String? { get }
     var coordinate: CLLocationCoordinate2D { get }
     
 }
@@ -31,8 +32,16 @@ class PrototypeData: MapDataSource {
     
     struct PrototypeObject: MapDataObject {
         var id: String
-        var title: String
+        var title: String?
+        var subtitle: String?
         var coordinate: CLLocationCoordinate2D
+        
+        init(id: String, title: String? = nil, subtitle: String? = nil, coordinate: CLLocationCoordinate2D) {
+            self.id = id
+            self.title = title
+            self.subtitle = subtitle
+            self.coordinate = coordinate
+        }
     }
     
     init() {

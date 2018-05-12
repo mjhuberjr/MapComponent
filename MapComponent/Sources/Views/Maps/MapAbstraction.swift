@@ -21,11 +21,38 @@ class MapAbstraction: UIView {
         self.presenter = presenter
         
         let mapAttributes = presenter.mapConfiguration.mapAttributes
-        self.mapView = MapViewAbstraction(mapAttributes: mapAttributes, delegate: delegate)
+        mapView = MapViewAbstraction(mapAttributes: mapAttributes, delegate: delegate)
+        setup(mapView)
+        addAnnotations()
     }
     
     func center(_ coordinate: CLLocationCoordinate2D) {
         mapView.setCenter(coordinate, animated: true)
+    }
+    
+}
+
+// MARK: - Private methods
+
+private extension MapAbstraction {
+    
+    func setup(_ view: UIView) {
+        addSubview(mapView)
+        addConstraints(view)
+    }
+    
+    func addConstraints(_ view: UIView) {
+        view.pinToEdges(of: self)
+    }
+    
+    func addAnnotations() {
+        var annotations: [AnnotationAbstraction] = []
+        let dataObjects = presenter.dataSource.data
+        for dataObject in dataObjects {
+            let annotation = AnnotationAbstraction(data: dataObject)
+            annotations.append(annotation)
+        }
+        mapView.addAnnotations(annotations)
     }
     
 }

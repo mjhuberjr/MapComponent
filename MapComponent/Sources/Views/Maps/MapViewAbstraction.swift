@@ -8,8 +8,8 @@
 
 class MapViewAbstraction: MapType {
     
-    init(mapAttributes: MapAttributes, delegate: MapAbstractionDelegate, frame: CGRect = CGRect.zero) {
-        super.init(frame: frame)
+    init(mapAttributes: MapAttributes, delegate: MapAbstractionDelegate) {
+        super.init(frame: CGRect.zero)
         setup(with: mapAttributes, delegate: delegate)
     }
     
@@ -28,7 +28,7 @@ class MapViewAbstraction: MapType {
 
 // MARK: - Private methods
 
-extension MapViewAbstraction {
+private extension MapViewAbstraction {
     
     func setup(with mapAttributes: MapAttributes, delegate: MapAbstractionDelegate? = nil) {
         isZoomEnabled = mapAttributes.isZoomEnabled
