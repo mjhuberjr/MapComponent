@@ -8,7 +8,7 @@
 
 class MapViewAbstraction: MapType {
     
-    init(mapAttributes: MapAttributes, delegate: MapAbstractionDelegate) {
+    init(mapAttributes: MapAttributes, delegate: MapTypeDelegate?) {
         super.init(frame: CGRect.zero)
         setup(with: mapAttributes, delegate: delegate)
     }
@@ -30,12 +30,13 @@ class MapViewAbstraction: MapType {
 
 private extension MapViewAbstraction {
     
-    func setup(with mapAttributes: MapAttributes, delegate: MapAbstractionDelegate? = nil) {
+    func setup(with mapAttributes: MapAttributes, delegate: MapTypeDelegate? = nil) {
+        self.delegate = delegate
+        
         isZoomEnabled = mapAttributes.isZoomEnabled
         isScrollEnabled = mapAttributes.isScrollEnabled
         isPitchEnabled = mapAttributes.isPitchEnabled
         isRotateEnabled = mapAttributes.isRotateEnabled
-        self.delegate = delegate
     }
     
 }

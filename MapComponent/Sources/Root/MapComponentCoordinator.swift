@@ -22,7 +22,12 @@ class MapConfigurableImpl: MapConfigurable { init() { } }
 public class MapComponentCoordinator: MapComponentCoordination {
     
     fileprivate let rootViewController: MapRootViewController
-    fileprivate let interactor: MapInteraction? = nil
+    fileprivate var interactor: MapInteraction? {
+        if rootViewController.isViewLoaded {
+            return rootViewController.interactor
+        }
+        return nil
+    }
     
     public init(dataSource: MapDataSource?, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil, mapEvents: MapEvents? = nil) {
         let dataFormatter = dataFormattable ?? MapDataFormattableImpl()
@@ -30,7 +35,6 @@ public class MapComponentCoordinator: MapComponentCoordination {
         let dataSource = dataSource ?? PrototypeData()
         let presenter = MapComponentPresenter(dataSource: dataSource, dataFormatter: dataFormatter, mapConfiguration: mapConfiguration)
         rootViewController = MapRootViewController(presenter: presenter)
-//        interactor = rootViewController.interactor
     }
     
     public func mapComponentViewController() -> UIViewController {

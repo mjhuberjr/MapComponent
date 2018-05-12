@@ -14,8 +14,8 @@ public protocol MapConfigurable {
     
     var mapEvents: MapEvents { get }
     var offset: CGPoint { get }
-    var defaultZoomLevel: CGFloat { get }
-    var maxZoomLevel: CGFloat { get }
+    var defaultZoomLevel: Double { get }
+    var maxZoomLevel: Double { get }
     var mapAttributes: MapAttributes { get }
     
 }
@@ -24,8 +24,8 @@ extension MapConfigurable {
     
     var mapEvents: MapEvents { return MapEventsImpl() }
     var offset: CGPoint { return CGPoint.zero }
-    var defaultZoomLevel: CGFloat { return 0.0 }
-    var maxZoomLevel: CGFloat { return 0.0 }
+    var defaultZoomLevel: Double { return 150000.0 }
+    var maxZoomLevel: Double { return 0.0 }
     var mapAttributes: MapAttributes { return MapAttributes() }
     
 }

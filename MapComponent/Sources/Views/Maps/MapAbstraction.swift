@@ -13,21 +13,29 @@ class MapAbstraction: UIView {
     
     var mapView: MapViewAbstraction!
     var presenter: MapComponentPresentation!
+    var delegate: MapTypeDelegate! // Need to hang on to the delegate, just passing it along from the MapRootViewController gets cleaned up by ARC
+    
+    var mapConfiguration: MapConfigurable!
     
     // Map Events
     var annotationSelected: MapEventClosure?
 
-    func configure(_ presenter: MapComponentPresentation, delegate: MapAbstractionDelegate) {
+    func configure(_ presenter: MapComponentPresentation, delegate: MapTypeDelegate) {
         self.presenter = presenter
+        self.delegate = delegate
         
-        let mapAttributes = presenter.mapConfiguration.mapAttributes
-        mapView = MapViewAbstraction(mapAttributes: mapAttributes, delegate: delegate)
+        mapConfiguration = presenter.mapConfiguration
+        
+        let mapAttributes = mapConfiguration.mapAttributes
+        mapView = MapViewAbstraction(mapAttributes: mapAttributes, delegate: self.delegate)
         setup(mapView)
         addAnnotations()
     }
     
     func center(_ coordinate: CLLocationCoordinate2D) {
-        mapView.setCenter(coordinate, animated: true)
+        let zoomLevel = mapConfiguration.defaultZoomLevel
+        let camera = MapTypeCamera(lookingAtCenter: coordinate, fromEyeCoordinate: coordinate, eyeAltitude: zoomLevel)
+        mapView.setCamera(camera, animated: true)
     }
     
 }
