@@ -29,6 +29,8 @@
 		5E0F610820A2A3D900C38A53 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F610720A2A3D900C38A53 /* UIView+Constraints.swift */; };
 		5E0F610A20A3DCE700C38A53 /* MapAbstrationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F610920A3DCE700C38A53 /* MapAbstrationDelegate.swift */; };
 		5E1DF89420A65C9800BA6517 /* UIViewController+Embed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1DF89320A65C9800BA6517 /* UIViewController+Embed.swift */; };
+		5EF61DF920A8F6AF00E0371E /* AnnotationTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF61DF820A8F6AF00E0371E /* AnnotationTitleView.xib */; };
+		5EF61DFB20A8F6CA00E0371E /* AnnotationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61DFA20A8F6C900E0371E /* AnnotationTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		5E0F610720A2A3D900C38A53 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		5E0F610920A3DCE700C38A53 /* MapAbstrationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAbstrationDelegate.swift; sourceTree = "<group>"; };
 		5E1DF89320A65C9800BA6517 /* UIViewController+Embed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embed.swift"; sourceTree = "<group>"; };
+		5EF61DF820A8F6AF00E0371E /* AnnotationTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationTitleView.xib; sourceTree = "<group>"; };
+		5EF61DFA20A8F6C900E0371E /* AnnotationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 			children = (
 				5E0F60D8209BFB8700C38A53 /* AnnotationAbstraction.swift */,
 				5E0F60DA209BFBA000C38A53 /* AnnotationViewAbstraction.swift */,
+				5EF61DFA20A8F6C900E0371E /* AnnotationTitleView.swift */,
+				5EF61DF820A8F6AF00E0371E /* AnnotationTitleView.xib */,
 			);
 			path = Annotations;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF61DF920A8F6AF00E0371E /* AnnotationTitleView.xib in Resources */,
 				5E0F60CF209BF4E300C38A53 /* MapRootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +324,7 @@
 				5E0F60EA209CDC6F00C38A53 /* MapComponentCoordinator.swift in Sources */,
 				5E0F60D2209BFAB900C38A53 /* MapAbstraction.swift in Sources */,
 				5E0F60EE209CE75500C38A53 /* MapComponentPresenter.swift in Sources */,
+				5EF61DFB20A8F6CA00E0371E /* AnnotationTitleView.swift in Sources */,
 				5E0F60F320A28E5600C38A53 /* MapInteraction.swift in Sources */,
 				5E0F60D6209BFB4100C38A53 /* MapViewAbstraction.swift in Sources */,
 				5E0F60DB209BFBA000C38A53 /* AnnotationViewAbstraction.swift in Sources */,

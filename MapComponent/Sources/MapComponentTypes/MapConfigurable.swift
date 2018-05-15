@@ -24,7 +24,7 @@ extension MapConfigurable {
     
     var mapEvents: MapEvents { return MapEventsImpl() }
     var offset: CGPoint { return CGPoint.zero }
-    var defaultZoomLevel: Double { return 150000.0 }
+    var defaultZoomLevel: Double { return 150_000.0 }
     var maxZoomLevel: Double { return 0.0 }
     var mapAttributes: MapAttributes { return MapAttributes() }
     
