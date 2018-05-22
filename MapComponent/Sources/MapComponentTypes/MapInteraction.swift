@@ -48,7 +48,7 @@ extension MapInteractor: MapInteraction {
         let object = data.filter {
             $0.id == identifier
         }.first
-        guard let selectedObject = object else { fatalError("That object doesn't exist therefore should not be selectable."`) }
+        guard let selectedObject = object else { fatalError("That object doesn't exist therefore should not be selectable.") }
         presenter.selectedObject = selectedObject
         let coordinate = selectedObject.coordinate
         focus(on: coordinate)
