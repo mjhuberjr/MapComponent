@@ -55,7 +55,7 @@ private extension MapAbstraction {
     
     func addAnnotations() {
         var annotations: [AnnotationAbstraction] = []
-        let dataObjects = presenter.dataSource.data
+        let dataObjects = presenter.dataSource.mapDataObjects
         for dataObject in dataObjects {
             let annotation = AnnotationAbstraction(data: dataObject)
             annotations.append(annotation)

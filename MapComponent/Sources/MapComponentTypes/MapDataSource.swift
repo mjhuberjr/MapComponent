@@ -28,7 +28,7 @@ public protocol MapDataObject {
 
 class PrototypeData: MapDataSource {
     
-    var data: [MapDataObject]
+    var mapDataObjects: [MapDataObject]
     
     struct PrototypeObject: MapDataObject {
         var id: String
@@ -49,7 +49,7 @@ class PrototypeData: MapDataSource {
         let object2 = PrototypeObject(id: "2", title: "2700", coordinate: CLLocationCoordinate2D(latitude: 40.2968979, longitude: -111.69464749999997))
         let object3 = PrototypeObject(id: "3", title: "3500", coordinate: CLLocationCoordinate2D(latitude: 40.3916172, longitude: -111.85076620000001))
         let object4 = PrototypeObject(id: "4", title: "3700", coordinate: CLLocationCoordinate2D(latitude: 40.3768954, longitude: -111.79576450000002))
-        data = [object1, object2, object3, object4]
+        mapDataObjects = [object1, object2, object3, object4]
     }
     
 }

@@ -44,7 +44,7 @@ extension MapInteractor: MapInteraction {
     }
     
     func selectAnnotation(with identifier: String) {
-        let data = presenter.dataSource.data
+        let data = presenter.dataSource.mapDataObjects
         let object = data.filter {
             $0.id == identifier
         }.first
