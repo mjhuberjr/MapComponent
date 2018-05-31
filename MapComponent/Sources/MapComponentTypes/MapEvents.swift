@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol MapEvents: class {
+public protocol MapEvents {
     
     var annotationSelected: MapEventClosure? { get }
     

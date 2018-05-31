@@ -29,7 +29,7 @@ public class MapComponentCoordinator: MapComponentCoordination {
         return nil
     }
     
-    public init(dataSource: MapDataSource?, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil, mapEvents: MapEvents? = nil) {
+    public init(dataSource: MapDataSource?, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil) {
         let dataFormatter = dataFormattable ?? MapDataFormattableImpl()
         let mapConfiguration = mapConfigurable ?? MapConfigurableImpl()
         let dataSource = dataSource ?? PrototypeData()
