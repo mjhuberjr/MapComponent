@@ -14,7 +14,7 @@ import CoreLocation
 // them to MapDataObjects then bundle them back up as a MapDataSource.
 
 public protocol MapDataSource {
-    var data: [MapDataObject] { get }
+    var mapDataObjects: [MapDataObject] { get }
 }
 
 public protocol MapDataObject {
