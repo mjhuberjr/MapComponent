@@ -15,7 +15,7 @@ public struct MapAttributes {
     let isPitchEnabled: Bool
     let isRotateEnabled: Bool
     
-    init(isZoomEnabled: Bool = true,
+    public init(isZoomEnabled: Bool = true,
          isScrollEnabled: Bool = true,
          isPitchEnabled: Bool = true,
          isRotateEnabled: Bool = true) {
