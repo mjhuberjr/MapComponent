@@ -12,6 +12,8 @@ public protocol MapComponentCoordination: class {
     
     func mapComponentViewController() -> UIViewController
     
+    // MARK: - Interactions
+    func selectAnnotation(_ identifier: String)
 }
 
 // MARK: - Default implementations if not passed in from consumer of MapComponent
