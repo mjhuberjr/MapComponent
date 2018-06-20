@@ -20,7 +20,7 @@ public protocol MapConfigurable {
     
 }
 
-extension MapConfigurable {
+public extension MapConfigurable {
     
     var mapEvents: MapEvents { return MapEventsImpl() }
     var offset: CGPoint { return CGPoint.zero }

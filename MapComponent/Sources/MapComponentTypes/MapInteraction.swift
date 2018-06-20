@@ -51,7 +51,15 @@ extension MapInteractor: MapInteraction {
         guard let selectedObject = object else { fatalError("That object doesn't exist therefore should not be selectable.") }
         presenter.selectedObject = selectedObject
         let coordinate = selectedObject.coordinate
+        
+        selectAnnotationView(from: mapView, with: identifier)
+        
         focus(on: coordinate)
+    }
+    
+    func selectAnnotationView(from mapAbstraction: MapAbstraction, with identifier: String) {
+        let annotationView = mapAbstraction.mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        annotationView?.setSelected(true, animated: true)
     }
     
     func deselectAnnotation() {
