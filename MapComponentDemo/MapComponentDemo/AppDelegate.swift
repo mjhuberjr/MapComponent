@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let rootCoordinator = MapComponentCoordinator(dataSource: nil)
+        struct MapDataFormatter: MapDataFormattable {
+            func formatTitle(for object: MapDataObject) -> String? {
+                let title = object.title ?? ""
+                return "$\(title)"
+            }
+            
+            func formatTitleSelected(for object: MapDataObject) -> String? {
+                return formatTitle(for: object)
+            }
+        }
+        let dataFormatter = MapDataFormatter()
+        let rootCoordinator = MapComponentCoordinator(dataSource: nil, dataFormattable: dataFormatter, mapConfigurable: nil)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootCoordinator.mapComponentViewController()

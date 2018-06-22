@@ -30,8 +30,10 @@ class AnnotationTitleView: UIView {
         setupColors()
     }
     
-    func configure(_ data: MapDataObject, isSelected: Bool) {
-        titleLabel.text = data.title
+    func provide(formatter: MapDataFormattable, data: MapDataObject, isSelected: Bool) {
+        titleLabel.text = isSelected
+            ? formatter.formatTitleSelected(for: data)
+            : formatter.formatTitle(for: data)
         self.isSelected = isSelected
     }
     

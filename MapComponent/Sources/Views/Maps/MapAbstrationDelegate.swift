@@ -11,10 +11,12 @@ import Foundation
 class MapAbstractionDelegate: NSObject, MapEvents {
     
     var interactor: MapInteraction
+    var presenter: MapComponentPresentation
     var annotationSelected: MapEventClosure?
     
-    init(interactor: MapInteraction, mapConfiguration: MapConfigurable) {
+    init(interactor: MapInteraction, presenter: MapComponentPresentation, mapConfiguration: MapConfigurable) {
         self.interactor = interactor
+        self.presenter = presenter
         
         let mapEvents = mapConfiguration.mapEvents
         self.annotationSelected = mapEvents.annotationSelected
@@ -33,6 +35,7 @@ extension MapAbstractionDelegate: MapTypeDelegate {
         if annotationView == nil {
             annotationView = AnnotationViewAbstraction(annotation: annotation, reuseIdentifier: identifier)
         }
+        annotationView?.provide(presenter: presenter)
         return annotationView
     }
     
