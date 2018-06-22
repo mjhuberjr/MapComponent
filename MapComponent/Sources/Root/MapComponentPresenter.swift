@@ -30,6 +30,7 @@ class MapComponentPresenter: MapComponentPresentation {
         self.dataSource = dataSource
         self.dataFormatter = dataFormatter
         self.mapConfiguration = mapConfiguration
+        Themeable.shared.mapThemeable = mapConfiguration.themeable
     }
     
 }

@@ -62,11 +62,11 @@ private extension AnnotationTitleView {
     
     func setupColors() {
         if isSelected {
-            setupViews(with: UIColor(red:0.18, green:0.262, blue:0.619, alpha:1)) // FIXME: Us a themable type
+            setupViews(with: Themeable.shared.activeColor) // FIXME: Us a themable type
         } else {
-            setupViews(with: UIColor(red:0.44, green:0.60, blue:0.89, alpha:1.00)) // FIXME: Us a themable type
+            setupViews(with: Themeable.shared.primaryColor) // FIXME: Us a themable type
         }
-        titleLabel.textColor = .white
+        titleLabel.textColor = Themeable.shared.primaryTextColor
     }
     
     func setupViews(with color: UIColor) {

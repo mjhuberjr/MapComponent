@@ -17,6 +17,7 @@ public protocol MapConfigurable {
     var defaultZoomLevel: Double { get }
     var maxZoomLevel: Double { get }
     var mapAttributes: MapAttributes { get }
+    var themeable: MapThemeable { get }
     
 }
 
@@ -27,5 +28,6 @@ public extension MapConfigurable {
     var defaultZoomLevel: Double { return 150_000.0 }
     var maxZoomLevel: Double { return 0.0 }
     var mapAttributes: MapAttributes { return MapAttributes() }
-    
+    var themeable: MapThemeable { return MapThemeable() }
+
 }
