@@ -19,6 +19,7 @@ public protocol MapComponentCoordination: class {
 
 // MARK: - Default implementations if not passed in from consumer of MapComponent
 
+class MapDataFormattableImpl: MapDataFormattable { init() { } }
 class MapConfigurableImpl: MapConfigurable { init() { } }
 
 public class MapComponentCoordinator: MapComponentCoordination {
@@ -32,9 +33,10 @@ public class MapComponentCoordinator: MapComponentCoordination {
     }
     
     public init(dataSource: MapDataSource?, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil) {
+        let dataFormatter = dataFormattable ?? MapDataFormattableImpl()
         let mapConfiguration = mapConfigurable ?? MapConfigurableImpl()
         let dataSource = dataSource ?? PrototypeData()
-        let presenter = MapComponentPresenter(dataSource: dataSource, mapConfiguration: mapConfiguration)
+        let presenter = MapComponentPresenter(dataSource: dataSource, dataFormatter: dataFormatter, mapConfiguration: mapConfiguration)
         rootViewController = MapRootViewController(presenter: presenter)
     }
     
