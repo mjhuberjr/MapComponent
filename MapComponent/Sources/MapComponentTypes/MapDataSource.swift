@@ -14,7 +14,9 @@ import CoreLocation
 // them to MapDataObjects then bundle them back up as a MapDataSource.
 
 public protocol MapDataSource {
+    
     var mapDataObjects: [MapDataObject] { get }
+    
 }
 
 public protocol MapDataObject {
@@ -23,6 +25,17 @@ public protocol MapDataObject {
     var title: String? { get }
     var subtitle: String? { get }
     var coordinate: CLLocationCoordinate2D { get }
+    var mapDataFormatter: MapDataFormattable? { get }
+    
+}
+
+class MapDataFormattableImpl: MapDataFormattable {
+    
+    var mapData: MapDataObject
+    
+    init(mapData: MapDataObject) {
+        self.mapData = mapData
+    }
     
 }
 
@@ -35,12 +48,14 @@ class PrototypeData: MapDataSource {
         var title: String?
         var subtitle: String?
         var coordinate: CLLocationCoordinate2D
+        var mapDataFormatter: MapDataFormattable?
         
-        init(id: String, title: String? = nil, subtitle: String? = nil, coordinate: CLLocationCoordinate2D) {
+        init(id: String, title: String? = nil, subtitle: String? = nil, coordinate: CLLocationCoordinate2D, formatter: MapDataFormattable? = nil) {
             self.id = id
             self.title = title
             self.subtitle = subtitle
             self.coordinate = coordinate
+            self.mapDataFormatter = formatter ?? MapDataFormattableImpl(mapData: self)
         }
     }
     

@@ -11,7 +11,6 @@ import Foundation
 protocol MapComponentPresentation: class {
     
     var dataSource: MapDataSource { get }
-    var dataFormatter: MapDataFormattable { get }
     var mapConfiguration: MapConfigurable { get }
     
     var selectedObject: MapDataObject? { get set }
@@ -21,15 +20,14 @@ protocol MapComponentPresentation: class {
 class MapComponentPresenter: MapComponentPresentation {
     
     var dataSource: MapDataSource
-    var dataFormatter: MapDataFormattable
     var mapConfiguration: MapConfigurable
     
     var selectedObject: MapDataObject?
     
-    init(dataSource: MapDataSource, dataFormatter: MapDataFormattable, mapConfiguration: MapConfigurable) {
+    init(dataSource: MapDataSource, mapConfiguration: MapConfigurable) {
         self.dataSource = dataSource
-        self.dataFormatter = dataFormatter
         self.mapConfiguration = mapConfiguration
+        
         Themeable.shared.mapThemeable = mapConfiguration.themeable
     }
     
