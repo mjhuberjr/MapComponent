@@ -29,16 +29,6 @@ public protocol MapDataObject {
     
 }
 
-class MapDataFormattableImpl: MapDataFormattable {
-    
-    var mapData: MapDataObject
-    
-    init(mapData: MapDataObject) {
-        self.mapData = mapData
-    }
-    
-}
-
 class PrototypeData: MapDataSource {
     
     var mapDataObjects: [MapDataObject]
@@ -50,12 +40,11 @@ class PrototypeData: MapDataSource {
         var coordinate: CLLocationCoordinate2D
         var mapDataFormatter: MapDataFormattable?
         
-        init(id: String, title: String? = nil, subtitle: String? = nil, coordinate: CLLocationCoordinate2D, formatter: MapDataFormattable? = nil) {
+        init(id: String, title: String? = nil, subtitle: String? = nil, coordinate: CLLocationCoordinate2D) {
             self.id = id
             self.title = title
             self.subtitle = subtitle
             self.coordinate = coordinate
-            self.mapDataFormatter = formatter ?? MapDataFormattableImpl(mapData: self)
         }
     }
     

@@ -12,16 +12,14 @@ import Foundation
 
 public protocol MapDataFormattable {
     
-    var mapData: MapDataObject { get }
-    
-    func formatAnnotationTitle() -> String?
-    func formatAnnotationTitleSelected() -> String?
+    func formatTitle(for object: MapDataObject) -> String?
+    func formatTitleSelected(for object: MapDataObject) -> String?
     
 }
 
 extension MapDataFormattable {
     
-    func formatAnnotationTitle() -> String? { return mapData.title }
-    func formatAnnotationTitleSelected() -> String? { return mapData.title }
+    func formatTitle(for object: MapDataObject) -> String? { return object.title }
+    func formatTitleSelected(for object: MapDataObject) -> String? { return object.title }
     
 }
