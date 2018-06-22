@@ -25,7 +25,6 @@ public protocol MapDataObject {
     var title: String? { get }
     var subtitle: String? { get }
     var coordinate: CLLocationCoordinate2D { get }
-    var mapDataFormatter: MapDataFormattable? { get }
     
 }
 
@@ -38,7 +37,6 @@ class PrototypeData: MapDataSource {
         var title: String?
         var subtitle: String?
         var coordinate: CLLocationCoordinate2D
-        var mapDataFormatter: MapDataFormattable?
         
         init(id: String, title: String? = nil, subtitle: String? = nil, coordinate: CLLocationCoordinate2D) {
             self.id = id
