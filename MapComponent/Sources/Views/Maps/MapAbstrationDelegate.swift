@@ -40,8 +40,8 @@ extension MapAbstractionDelegate: MapTypeDelegate {
         guard let annotationView = view as? AnnotationViewAbstraction else { return }
         let identifier = annotationView.data.id
         let coordinate = annotationView.data.coordinate
-        interactor.focus(on: coordinate)
         annotationSelected?(identifier)
+        interactor.focus(on: coordinate)
     }
     
 }

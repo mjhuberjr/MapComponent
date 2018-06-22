@@ -30,6 +30,7 @@ class AnnotationViewAbstraction: AnnotationViewType {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        setup()
     }
     
 }
@@ -39,9 +40,18 @@ class AnnotationViewAbstraction: AnnotationViewType {
 private extension AnnotationViewAbstraction {
     
     func setup() {
-        annotationTitleView = AnnotationTitleView(frame: CGRect(x: frame.origin.x - 30, y: frame.origin.y - 32, width: 60, height: 32))
+        let rect = CGRect(x: frame.origin.x, y: frame.origin.y, width: 60, height: 32)
+        frame = rect
+        annotationTitleView = AnnotationTitleView(frame: rect)
         annotationTitleView.configure(data, isSelected: isSelected)
         addSubview(annotationTitleView)
+        
+        offsetAnnotation()
+    }
+    
+    func offsetAnnotation() {
+        frame.origin.x -= 30
+        frame.origin.y -= 32
     }
     
 }

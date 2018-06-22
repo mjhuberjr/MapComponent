@@ -55,7 +55,9 @@ private extension AnnotationTitleView {
         contentView.pinToEdges(of: self)
         
         boxView.layer.cornerRadius = 2.0
+        boxView.clipsToBounds = true
         markerView.transform = CGAffineTransform(rotationAngle: CGFloat.pi/4)
+        
     }
     
     func setupColors() {
