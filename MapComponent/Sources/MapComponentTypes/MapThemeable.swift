@@ -22,8 +22,16 @@ class Themeable {
 
 public struct MapThemeable {
     
-    var primaryColor: UIColor = .darkGray
-    var activeColor: UIColor = .black
-    var primaryTextColor: UIColor = .white
+    var primaryColor: UIColor
+    var activeColor: UIColor
+    var primaryTextColor: UIColor
+    
+    public init(primaryColor: UIColor = .darkGray,
+                activeColor: UIColor = .black,
+                primaryTextColor: UIColor = .white) {
+        self.primaryColor = primaryColor
+        self.activeColor = activeColor
+        self.primaryTextColor = primaryTextColor
+    }
     
 }
