@@ -65,7 +65,7 @@ private extension MapAbstraction {
     }
     
     func offset(_ coordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
-        let offsetY = mapConfiguration.offset.y
+        let offsetY = mapConfiguration.offsetY
         guard offsetY != 0 else { return coordinate }
         let centerY = mapView.frame.midY
         let distanceFromCenter = centerY - offsetY

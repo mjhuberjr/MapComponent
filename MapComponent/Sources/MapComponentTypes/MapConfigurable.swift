@@ -13,7 +13,7 @@ class MapEventsImpl: MapEvents { init() { } }
 public protocol MapConfigurable {
     
     var mapEvents: MapEvents { get }
-    var offset: CGPoint { get }
+    var offsetY: CGFloat { get }
     var defaultZoomLevel: Int { get }
     var maxZoomLevel: Int { get }
     var mapAttributes: MapAttributes { get }
@@ -24,7 +24,7 @@ public protocol MapConfigurable {
 public extension MapConfigurable {
     
     var mapEvents: MapEvents { return MapEventsImpl() }
-    var offset: CGPoint { return CGPoint(x: 0, y: 200) }
+    var offsetY: CGFloat { return 0.0 }
     var defaultZoomLevel: Int { return 6 }
     var maxZoomLevel: Int { return 28 }
     var mapAttributes: MapAttributes { return MapAttributes() }
