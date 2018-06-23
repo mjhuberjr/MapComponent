@@ -35,6 +35,8 @@ class MapAbstraction: UIView {
     
     func center(_ coordinate: CLLocationCoordinate2D) {
         mapView.setCenter(coordinate, withZoomLevel: 10, animated: true)
+        let displayCoordinate = offset(coordinate)
+        mapView.setCenter(displayCoordinate, withZoomLevel: 10, animated: true)
     }
     
 }
@@ -60,6 +62,17 @@ private extension MapAbstraction {
             annotations.append(annotation)
         }
         mapView.addAnnotations(annotations)
+    }
+    
+    func offset(_ coordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
+        let offsetY = mapConfiguration.offset.y
+        guard offsetY != 0 else { return coordinate }
+        let centerY = mapView.frame.midY
+        let distanceFromCenter = centerY - offsetY
+        let percentToOffsetY = Double(distanceFromCenter / mapView.frame.height)
+        var center = coordinate
+        center.latitude -= self.mapView.region.span.latitudeDelta * percentToOffsetY // 0.5 is the top of the screen, because the coordinate is at the center of the screen
+        return center
     }
     
 }
