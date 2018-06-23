@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class MapAbstraction: UIView {
     
@@ -33,9 +34,7 @@ class MapAbstraction: UIView {
     }
     
     func center(_ coordinate: CLLocationCoordinate2D) {
-        let zoomLevel = mapConfiguration.defaultZoomLevel
-        let camera = MapTypeCamera(lookingAtCenter: coordinate, fromEyeCoordinate: coordinate, eyeAltitude: zoomLevel)
-        mapView.setCamera(camera, animated: true)
+        mapView.setCenter(coordinate, withZoomLevel: 10, animated: true)
     }
     
 }
@@ -50,7 +49,7 @@ private extension MapAbstraction {
     }
     
     func addConstraints(_ view: UIView) {
-        view.pinToEdges(of: self)
+        view.frame = self.frame
     }
     
     func addAnnotations() {
