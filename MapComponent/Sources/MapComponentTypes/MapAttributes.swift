@@ -17,8 +17,8 @@ public struct MapAttributes {
     
     public init(isZoomEnabled: Bool = true,
          isScrollEnabled: Bool = true,
-         isPitchEnabled: Bool = true,
-         isRotateEnabled: Bool = true) {
+         isPitchEnabled: Bool = false,
+         isRotateEnabled: Bool = false) {
         self.isZoomEnabled = isZoomEnabled
         self.isScrollEnabled = isScrollEnabled
         self.isPitchEnabled = isPitchEnabled
