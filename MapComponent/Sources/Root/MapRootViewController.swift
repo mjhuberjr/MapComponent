@@ -65,7 +65,6 @@ private extension MapRootViewController {
     func setupMapView() {
         let delegate = MapAbstractionDelegate(interactor: interactor, presenter: presenter, mapConfiguration: presenter.mapConfiguration)
         mapView.configure(presenter, delegate: delegate)
-        interactor.recenter()
     }
     
     @objc func reframeMapView() {

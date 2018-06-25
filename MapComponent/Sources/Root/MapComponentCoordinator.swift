@@ -49,10 +49,6 @@ public class MapComponentCoordinator: MapComponentCoordination {
 // MARK: - Map Interactions
 
 extension MapComponentCoordinator {
-
-    public func recenter() {
-        interactor?.recenter()
-    }
     
     public func focus(on coordinate: CLLocationCoordinate2D) {
         interactor?.focus(on: coordinate)

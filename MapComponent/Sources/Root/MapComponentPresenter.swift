@@ -15,7 +15,6 @@ protocol MapComponentPresentation: class {
     var mapConfiguration: MapConfigurable { get }
     
     var selectedObject: MapDataObject? { get set }
-    var centerLocation: CLLocationCoordinate2D { get }
     
 }
 
@@ -26,10 +25,6 @@ class MapComponentPresenter: MapComponentPresentation {
     var mapConfiguration: MapConfigurable
     
     var selectedObject: MapDataObject?
-    
-    var centerLocation: CLLocationCoordinate2D {
-        return dataSource.centerLocation
-    }
     
     init(dataSource: MapDataSource, dataFormatter: MapDataFormattable, mapConfiguration: MapConfigurable) {
         self.dataSource = dataSource
