@@ -10,6 +10,6 @@ import Foundation
 
 public protocol MapComponentAdapter {
     
-    func getObjects() -> MapDataSource
+    func getMapObjects() -> MapDataSource
     
 }
