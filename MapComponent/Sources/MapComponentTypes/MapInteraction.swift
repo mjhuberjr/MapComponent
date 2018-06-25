@@ -33,8 +33,7 @@ class MapInteractor {
 extension MapInteractor: MapInteraction {
     
     func recenter() {
-        // TODO: Use current location, for now use SLC
-        let coordinate  = CLLocationCoordinate2D(latitude: 40.5649781, longitude: -111.83897260000003)
+        let coordinate  = presenter.centerLocation
         mapView.center(coordinate)
     }
     

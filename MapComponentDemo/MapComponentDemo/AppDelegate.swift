@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         let dataFormatter = MapDataFormatter()
-        let rootCoordinator = MapComponentCoordinator(dataSource: nil, dataFormattable: dataFormatter, mapConfigurable: nil)
+        let rootCoordinator = MapComponentCoordinator(adapter: nil, dataFormattable: dataFormatter, mapConfigurable: nil)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootCoordinator.mapComponentViewController()

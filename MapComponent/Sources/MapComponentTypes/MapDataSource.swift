@@ -16,6 +16,7 @@ import CoreLocation
 public protocol MapDataSource {
     
     var mapDataObjects: [MapDataObject] { get }
+    var centerLocation: CLLocationCoordinate2D { get }
     
 }
 
@@ -31,6 +32,7 @@ public protocol MapDataObject {
 class PrototypeData: MapDataSource {
     
     var mapDataObjects: [MapDataObject]
+    var centerLocation: CLLocationCoordinate2D
     
     struct PrototypeObject: MapDataObject {
         var id: String
@@ -52,6 +54,7 @@ class PrototypeData: MapDataSource {
         let object3 = PrototypeObject(id: "3", title: "3500", coordinate: CLLocationCoordinate2D(latitude: 40.3916172, longitude: -111.85076620000001))
         let object4 = PrototypeObject(id: "4", title: "3700", coordinate: CLLocationCoordinate2D(latitude: 40.3768954, longitude: -111.79576450000002))
         mapDataObjects = [object1, object2, object3, object4]
+        centerLocation = CLLocationCoordinate2D(latitude: 40.5649781, longitude: -111.83897260000003)
     }
     
 }
