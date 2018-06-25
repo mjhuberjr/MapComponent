@@ -32,10 +32,10 @@ public class MapComponentCoordinator: MapComponentCoordination {
         return nil
     }
     
-    public init(dataSource: MapDataSource?, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil) {
+    public init(adapter: MapComponentAdapter?, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil) {
         let dataFormatter = dataFormattable ?? MapDataFormattableImpl()
         let mapConfiguration = mapConfigurable ?? MapConfigurableImpl()
-        let dataSource = dataSource ?? PrototypeData()
+        let dataSource = adapter?.getObjects() ?? PrototypeData()
         let presenter = MapComponentPresenter(dataSource: dataSource, dataFormatter: dataFormatter, mapConfiguration: mapConfiguration)
         rootViewController = MapRootViewController(presenter: presenter)
     }

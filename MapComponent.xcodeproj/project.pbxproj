@@ -31,6 +31,7 @@
 		5E1DF89420A65C9800BA6517 /* UIViewController+Embed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1DF89320A65C9800BA6517 /* UIViewController+Embed.swift */; };
 		5E32624020DD486400B570E7 /* MapThemeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E32623F20DD486400B570E7 /* MapThemeable.swift */; };
 		5E32624920DE059F00B570E7 /* MapKit+ZoomLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E32624820DE059F00B570E7 /* MapKit+ZoomLevel.swift */; };
+		5EEACD5120E149CB0035748B /* MapComponentAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEACD5020E149CB0035748B /* MapComponentAdapter.swift */; };
 		5EF61DF920A8F6AF00E0371E /* AnnotationTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF61DF820A8F6AF00E0371E /* AnnotationTitleView.xib */; };
 		5EF61DFB20A8F6CA00E0371E /* AnnotationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF61DFA20A8F6C900E0371E /* AnnotationTitleView.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		5E1DF89320A65C9800BA6517 /* UIViewController+Embed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embed.swift"; sourceTree = "<group>"; };
 		5E32623F20DD486400B570E7 /* MapThemeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapThemeable.swift; sourceTree = "<group>"; };
 		5E32624820DE059F00B570E7 /* MapKit+ZoomLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapKit+ZoomLevel.swift"; sourceTree = "<group>"; };
+		5EEACD5020E149CB0035748B /* MapComponentAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapComponentAdapter.swift; sourceTree = "<group>"; };
 		5EF61DF820A8F6AF00E0371E /* AnnotationTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnotationTitleView.xib; sourceTree = "<group>"; };
 		5EF61DFA20A8F6C900E0371E /* AnnotationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				5E0F60F020A28E1E00C38A53 /* MapComponentClosures.swift */,
+				5EEACD5020E149CB0035748B /* MapComponentAdapter.swift */,
 				5E0F60F220A28E5600C38A53 /* MapInteraction.swift */,
 				5E0F60F420A28E9500C38A53 /* MapEvents.swift */,
 				5E0F60F620A28EBB00C38A53 /* MapDataSource.swift */,
@@ -336,6 +339,7 @@
 				5E0F60D6209BFB4100C38A53 /* MapViewAbstraction.swift in Sources */,
 				5E0F60DB209BFBA000C38A53 /* AnnotationViewAbstraction.swift in Sources */,
 				5E0F610A20A3DCE700C38A53 /* MapAbstrationDelegate.swift in Sources */,
+				5EEACD5120E149CB0035748B /* MapComponentAdapter.swift in Sources */,
 				5E0F60F720A28EBB00C38A53 /* MapDataSource.swift in Sources */,
 				5E0F60FB20A28EED00C38A53 /* MapConfigurable.swift in Sources */,
 				5E0F60F120A28E1E00C38A53 /* MapComponentClosures.swift in Sources */,
