@@ -35,7 +35,7 @@ public class MapComponentCoordinator: MapComponentCoordination {
     public init(adapter: MapComponentAdapter?, dataFormattable: MapDataFormattable? = nil, mapConfigurable: MapConfigurable? = nil) {
         let dataFormatter = dataFormattable ?? MapDataFormattableImpl()
         let mapConfiguration = mapConfigurable ?? MapConfigurableImpl()
-        let dataSource = adapter?.getObjects() ?? PrototypeData()
+        let dataSource = adapter?.getMapObjects() ?? PrototypeData()
         let presenter = MapComponentPresenter(dataSource: dataSource, dataFormatter: dataFormatter, mapConfiguration: mapConfiguration)
         rootViewController = MapRootViewController(presenter: presenter)
     }
