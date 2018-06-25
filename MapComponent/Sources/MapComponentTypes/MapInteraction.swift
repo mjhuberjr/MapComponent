@@ -33,8 +33,8 @@ class MapInteractor {
 extension MapInteractor: MapInteraction {
     
     func recenter() {
-        let coordinate  = presenter.centerLocation
-        mapView.center(coordinate)
+        guard let identifier = presenter.dataSource.mapDataObjects.first?.id else { return }
+        selectAnnotation(with: identifier)
     }
     
     func focus(on coordinate: CLLocationCoordinate2D?) {

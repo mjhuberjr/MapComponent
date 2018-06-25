@@ -34,9 +34,9 @@ class MapAbstraction: UIView {
     }
     
     func center(_ coordinate: CLLocationCoordinate2D) {
-        mapView.setCenter(coordinate, withZoomLevel: 10, animated: true)
+        mapView.setCenter(coordinate, withZoomLevel: mapConfiguration.defaultZoomLevel, animated: true)
         let displayCoordinate = offset(coordinate)
-        mapView.setCenter(displayCoordinate, withZoomLevel: 10, animated: true)
+        mapView.setCenter(displayCoordinate, withZoomLevel: mapConfiguration.defaultZoomLevel, animated: false)
     }
     
 }
