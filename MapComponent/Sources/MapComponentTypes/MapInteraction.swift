@@ -51,8 +51,11 @@ extension MapInteractor: MapInteraction {
     }
     
     func selectAnnotationView(from mapAbstraction: MapAbstraction, with identifier: String) {
-        let annotationView = mapAbstraction.mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-        annotationView?.setSelected(true, animated: true)
+        let annotation = mapView.mapView.annotations.filter { annotation in
+            guard let annotationAbstraction = annotation as? AnnotationAbstraction else { return false }
+            return annotationAbstraction.id == identifier
+        }.first!
+        mapAbstraction.mapView.selectAnnotation(annotation, animated: true)
     }
     
     func deselectAnnotation() {

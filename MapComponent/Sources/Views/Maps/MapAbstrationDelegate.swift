@@ -10,6 +10,8 @@ import Foundation
 
 class MapAbstractionDelegate: NSObject, MapEvents {
     
+    fileprivate let reuseIdentifier = "AnnotationView" 
+    
     var interactor: MapInteraction
     var presenter: MapComponentPresentation
     var annotationSelected: MapEventClosure?
@@ -30,7 +32,7 @@ extension MapAbstractionDelegate: MapTypeDelegate {
     
     func mapView(_ mapView: MapType, viewFor annotation: AnnotationType) -> AnnotationViewType? {
         guard let annotation = annotation as? AnnotationAbstraction else { return nil }
-        let identifier = annotation.id
+        let identifier = reuseIdentifier
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? AnnotationViewAbstraction
         if annotationView == nil {
             annotationView = AnnotationViewAbstraction(annotation: annotation, reuseIdentifier: identifier)

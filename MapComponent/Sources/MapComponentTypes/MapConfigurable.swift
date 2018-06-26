@@ -25,7 +25,7 @@ public extension MapConfigurable {
     
     var mapEvents: MapEvents { return MapEventsImpl() }
     var offsetY: CGFloat { return 0.0 }
-    var defaultZoomLevel: Int { return 6 }
+    var defaultZoomLevel: Int { return 10 }
     var maxZoomLevel: Int { return 28 }
     var mapAttributes: MapAttributes { return MapAttributes() }
     var themeable: MapThemeable { return MapThemeable() }

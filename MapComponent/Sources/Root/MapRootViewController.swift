@@ -65,6 +65,14 @@ private extension MapRootViewController {
     func setupMapView() {
         let delegate = MapAbstractionDelegate(interactor: interactor, presenter: presenter, mapConfiguration: presenter.mapConfiguration)
         mapView.configure(presenter, delegate: delegate)
+        
+        centerMap()
+    }
+    
+    func centerMap() {
+        let dataObjects = presenter.dataSource.mapDataObjects
+        guard let identifier = dataObjects.first?.id else { return }
+        interactor.selectAnnotation(with: identifier)
     }
     
     @objc func reframeMapView() {
