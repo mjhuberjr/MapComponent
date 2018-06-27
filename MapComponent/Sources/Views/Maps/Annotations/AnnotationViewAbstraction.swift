@@ -47,7 +47,7 @@ private extension AnnotationViewAbstraction {
         guard let formatter = presenter?.dataFormatter else {
             fatalError("You have to provide a MapComponentPresentation to the AnnotationViewAbstraction")
         }
-        let rect = CGRect(x: frame.origin.x, y: frame.origin.y, width: 60, height: 32)
+        let rect = CGRect.zero
         frame = rect
         annotationTitleView = AnnotationTitleView(frame: rect)
         annotationTitleView.provide(formatter: formatter, data: data, isSelected: isSelected)

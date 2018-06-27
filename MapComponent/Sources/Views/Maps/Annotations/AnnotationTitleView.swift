@@ -53,20 +53,20 @@ private extension AnnotationTitleView {
         bundle.loadNibNamed("AnnotationTitleView", owner: self, options: nil)
         addSubview(contentView)
         
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.pinToEdges(of: self)
-        
-        boxView.layer.cornerRadius = 2.0
+        boxView.layer.cornerRadius = 6.0
         boxView.clipsToBounds = true
+        
         markerView.transform = CGAffineTransform(rotationAngle: CGFloat.pi/4)
+        markerView.layer.cornerRadius = 2.0
+        markerView.clipsToBounds = true
         
     }
     
     func setupColors() {
         if isSelected {
-            setupViews(with: Themeable.shared.activeColor) // FIXME: Us a themable type
+            setupViews(with: Themeable.shared.activeColor)
         } else {
-            setupViews(with: Themeable.shared.primaryColor) // FIXME: Us a themable type
+            setupViews(with: Themeable.shared.primaryColor)
         }
         titleLabel.textColor = Themeable.shared.primaryTextColor
     }

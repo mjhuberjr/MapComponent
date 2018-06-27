@@ -20,22 +20,22 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="315" height="62"/>
+            <rect key="frame" x="0.0" y="0.0" width="141" height="90"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Mp-5V-aIk">
-                    <rect key="frame" x="152" y="52" width="10" height="10"/>
+                    <rect key="frame" x="63" y="53.5" width="14" height="14"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="10" id="iWl-PI-cwf"/>
-                        <constraint firstAttribute="width" constant="10" id="u3s-aT-rA4"/>
+                        <constraint firstAttribute="height" constant="14" id="37a-M0-q42"/>
+                        <constraint firstAttribute="width" constant="14" id="fVA-UE-BbF"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSh-Ww-RSw">
-                    <rect key="frame" x="0.0" y="0.0" width="315" height="57"/>
+                    <rect key="frame" x="28" y="29" width="85.5" height="32.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-8x-ZIl">
-                            <rect key="frame" x="123" y="18.5" width="69.5" height="21"/>
+                            <rect key="frame" x="8" y="6" width="69.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -43,23 +43,23 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="fyi-8x-ZIl" firstAttribute="centerY" secondItem="nSh-Ww-RSw" secondAttribute="centerY" id="5AD-p5-fsY"/>
-                        <constraint firstItem="fyi-8x-ZIl" firstAttribute="centerX" secondItem="nSh-Ww-RSw" secondAttribute="centerX" id="P8F-RA-OWd"/>
+                        <constraint firstAttribute="bottom" secondItem="fyi-8x-ZIl" secondAttribute="bottom" constant="6" id="4xl-YH-y0a"/>
+                        <constraint firstItem="fyi-8x-ZIl" firstAttribute="leading" secondItem="nSh-Ww-RSw" secondAttribute="leading" constant="8" id="Z9F-t7-jhD"/>
+                        <constraint firstItem="fyi-8x-ZIl" firstAttribute="top" secondItem="nSh-Ww-RSw" secondAttribute="top" constant="6" id="aZ5-0t-0nW"/>
+                        <constraint firstAttribute="trailing" secondItem="fyi-8x-ZIl" secondAttribute="trailing" constant="8" id="bAB-LN-Tje"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nSh-Ww-RSw" secondAttribute="trailing" id="A79-W8-MVT"/>
-                <constraint firstItem="2Mp-5V-aIk" firstAttribute="top" secondItem="nSh-Ww-RSw" secondAttribute="bottom" constant="-5" id="GTB-to-DZe"/>
-                <constraint firstItem="nSh-Ww-RSw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LAQ-43-kJ5"/>
-                <constraint firstItem="nSh-Ww-RSw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="c1t-Ax-0WV"/>
-                <constraint firstItem="2Mp-5V-aIk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="nXm-pd-ptm"/>
-                <constraint firstAttribute="bottom" secondItem="2Mp-5V-aIk" secondAttribute="bottom" id="wmf-mG-gV5"/>
+                <constraint firstItem="2Mp-5V-aIk" firstAttribute="centerX" secondItem="nSh-Ww-RSw" secondAttribute="centerX" id="TRr-Mp-D2c"/>
+                <constraint firstItem="nSh-Ww-RSw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="q2L-QN-KMG"/>
+                <constraint firstItem="nSh-Ww-RSw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="r4G-Da-3eE"/>
+                <constraint firstItem="2Mp-5V-aIk" firstAttribute="top" secondItem="nSh-Ww-RSw" secondAttribute="bottom" constant="-8" id="tvO-3y-2Yb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="5.5" y="-249"/>
+            <point key="canvasLocation" x="-81.5" y="-235"/>
         </view>
     </objects>
 </document>
